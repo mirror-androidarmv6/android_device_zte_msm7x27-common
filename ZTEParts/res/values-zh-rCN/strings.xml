@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-        <string name="app_name">Blade 设置</string>
+        <string name="app_name">Zte 设置</string>
         <string name="prox_calibration_title_head">校准距离传感器</string>
         <string name="prox_calibration_summary_head">当运行距离传感器校准时，不要在靠近屏幕顶部放置任何东西</string>
         <string name="prox_display_title_head">显示距离传感器数据</string>

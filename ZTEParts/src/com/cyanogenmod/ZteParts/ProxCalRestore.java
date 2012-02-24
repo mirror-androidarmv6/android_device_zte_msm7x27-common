@@ -1,4 +1,4 @@
-package com.cyanogenmod.BladeParts;
+package com.cyanogenmod.ZteParts;
 
 import java.io.File;
 
