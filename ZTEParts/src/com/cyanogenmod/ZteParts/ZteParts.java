@@ -1,6 +1,6 @@
-package com.cyanogenmod.ZTEParts;
+package com.cyanogenmod.BladeParts;
 
-import com.cyanogenmod.ZTEParts.R;
+import com.cyanogenmod.BladeParts.R;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -12,13 +12,13 @@ import java.io.FileOutputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class ZTEParts extends PreferenceActivity {
+public class BladeParts extends PreferenceActivity {
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		addPreferencesFromResource(R.xml.ZTEparts);
+		addPreferencesFromResource(R.xml.bladeparts);
 	}
 
    private void writeValue(String parameter, int value) {

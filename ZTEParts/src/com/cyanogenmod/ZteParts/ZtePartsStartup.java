@@ -1,4 +1,4 @@
-package com.cyanogenmod.ZTEParts;
+package com.cyanogenmod.BladeParts;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -10,7 +10,7 @@ import java.io.FileOutputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class ZTEPartsStartup extends BroadcastReceiver
+public class BladePartsStartup extends BroadcastReceiver
 {
    private void writeValue(String parameter, int value) {
       try {

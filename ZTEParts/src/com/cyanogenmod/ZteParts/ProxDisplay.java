@@ -1,4 +1,4 @@
-package com.cyanogenmod.ZTEParts;
+package com.cyanogenmod.BladeParts;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
