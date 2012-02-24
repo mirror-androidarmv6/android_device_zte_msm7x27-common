@@ -30,7 +30,7 @@ COMMON_GLOBAL_CFLAGS += -DMISSING_EGL_EXTERNAL_IMAGE -DMISSING_GRALLOC_BUFFERS -
 COMMON_GLOBAL_CFLAGS += -DREFRESH_RATE=60 -DQCOM_HARDWARE -DFORCE_CPU_UPLOAD
 BOARD_HAS_FLIPPED_SCREEN := true
 TARGET_SPECIFIC_HEADER_PATH := device/zte/common/include
-BOARD_EGL_CFG := device/zte/common/prebuilt/system/lib/egl/egl.cfg
+BOARD_EGL_CFG := device/zte/common/prebuilt/lib/egl/egl.cfg
 TARGET_USES_OVERLAY                := false
 TARGET_HAVE_BYPASS                 := false
 TARGET_USES_SF_BYPASS              := false
