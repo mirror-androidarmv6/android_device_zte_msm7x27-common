@@ -69,3 +69,18 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
     frameworks/base/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
     frameworks/base/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
+
+PRODUCT_COPY_FILES += \
+    device/zte/common/prebuilt/etc/dhcpcd/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \
+    device/zte/common/prebuilt/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
+    device/zte/common/prebuilt/etc/AutoVolumeControl.txt:system/etc/AutoVolumeControl.txt
+
+# fstab
+PRODUCT_COPY_FILES += \
+    device/zte/common/prebuilt/etc/vold.fstab:system/etc/vold.fstab \
+    device/zte/common/prebuilt/usr/idc/synaptics-rmi4-ts.idc:system/usr/idc/synaptics-rmi4-ts.idc
+
+# RIL
+PRODUCT_COPY_FILES += \
+    device/zte/common/prebuilt/lib/libril.so:system/lib/libril.so \
+    device/zte/common/prebuilt/lib/libril.so:obj/lib/libril.so
