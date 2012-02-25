@@ -78,6 +78,7 @@ PRODUCT_COPY_FILES += \
 # fstab
 PRODUCT_COPY_FILES += \
     device/zte/common/prebuilt/etc/vold.fstab:system/etc/vold.fstab \
+    device/zte/common/prebuilt/usr/idc/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc \
     device/zte/common/prebuilt/usr/idc/synaptics-rmi4-ts.idc:system/usr/idc/synaptics-rmi4-ts.idc
 
 # RIL
