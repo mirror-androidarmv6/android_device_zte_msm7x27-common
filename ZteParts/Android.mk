@@ -11,5 +11,8 @@ LOCAL_CERTIFICATE := platform
 ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),skate)
 include $(BUILD_PACKAGE)
 endif
+ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),blade)
+include $(BUILD_PACKAGE)
+endif
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
