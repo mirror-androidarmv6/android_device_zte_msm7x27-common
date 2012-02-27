@@ -30,6 +30,7 @@ PRODUCT_PACKAGES += \
     libOmxCore \
     libOmxVidEnc \
     FM \
+    ZteParts \
     abtfilt \
     prox_cal \
     dexpreopt
