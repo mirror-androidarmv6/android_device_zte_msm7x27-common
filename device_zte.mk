@@ -86,3 +86,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/zte/common/prebuilt/lib/libril.so:system/lib/libril.so \
     device/zte/common/prebuilt/lib/libril.so:obj/lib/libril.so
+
+# Goo Manager
+PRODUCT_COPY_FILES += \
+    device/zte/common/prebuilt/app/GooManager.apk:system/app/GooManager.apk
