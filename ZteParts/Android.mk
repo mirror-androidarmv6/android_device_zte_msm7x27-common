@@ -10,11 +10,9 @@ LOCAL_CERTIFICATE := platform
 
 ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),skate)
 include $(BUILD_PACKAGE)
-endif
-ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),blade)
+else ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),blade)
 include $(BUILD_PACKAGE)
-endif
-ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),blade2)
+else ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),blade2)
 include $(BUILD_PACKAGE)
 endif
 
