@@ -50,10 +50,9 @@ LOCAL_LDLIBS +=
 
 ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),blade)
 include $(BUILD_SHARED_LIBRARY)
-endif
-
-ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),skate)
+else ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),skate)
+include $(BUILD_SHARED_LIBRARY)
+else ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),blade2)
 include $(BUILD_SHARED_LIBRARY)
 endif
-
 endif

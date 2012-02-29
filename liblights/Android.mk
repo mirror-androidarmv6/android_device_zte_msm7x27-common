@@ -12,15 +12,14 @@ LOCAL_SHARED_LIBRARIES := liblog
 
 ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),skate)
 LOCAL_MODULE := lights.skate
-
 LOCAL_MODULE_TAGS := optional
-
 include $(BUILD_SHARED_LIBRARY)
-endif
-ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),blade)
+else ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),blade)
 LOCAL_MODULE := lights.blade
-
 LOCAL_MODULE_TAGS := optional
-
+include $(BUILD_SHARED_LIBRARY)
+else ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),blade2)
+LOCAL_MODULE := lights.blade2
+LOCAL_MODULE_TAGS := optional
 include $(BUILD_SHARED_LIBRARY)
 endif
