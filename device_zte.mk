@@ -18,18 +18,20 @@ DEVICE_PACKAGE_OVERLAYS := device/zte/common/overlay
 
 PRODUCT_MANUFACTURER := ZTE
 
+$(call inherit-product, device/zte/common/build_prop.mk)
+
+# HW decoding
 PRODUCT_PACKAGES += \
-    Gallery2 \
     libmm-omxcore \
-    SpareParts \
-    Development \
-    Term \
-    hwcomposer.default \
     libstagefrighthw \
     libopencorehw \
     libOmxCore \
-    libOmxVidEnc \
-    FM \
+    libOmxVidEnc
+
+# Misc
+PRODUCT_PACKAGES += \
+    Gallery2 \
+    hwcomposer.default \
     ZteParts \
     abtfilt \
     prox_cal \
@@ -41,12 +43,11 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_LOCALES := en_GB
 
-# ZTE devices uses high-density artwork where available
+# ZTE devices use high-density artwork where available
 PRODUCT_LOCALES += hdpi
 
 # We have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
-
 DISABLE_DEXPREOPT := false
 
 # Sysctl
@@ -71,12 +72,13 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
     frameworks/base/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
+# WiFi and Audio
 PRODUCT_COPY_FILES += \
     device/zte/common/prebuilt/etc/dhcpcd/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \
     device/zte/common/prebuilt/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
     device/zte/common/prebuilt/etc/AutoVolumeControl.txt:system/etc/AutoVolumeControl.txt
 
-# fstab
+# Vold and Touchscren
 PRODUCT_COPY_FILES += \
     device/zte/common/prebuilt/etc/vold.fstab:system/etc/vold.fstab \
     device/zte/common/prebuilt/usr/idc/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc \
