@@ -84,6 +84,15 @@ PRODUCT_COPY_FILES += \
     device/zte/common/prebuilt/usr/idc/synaptics-rmi-touchscreen.idc:system/usr/idc/synaptics-rmi-touchscreen.idc \
     device/zte/common/prebuilt/usr/idc/synaptics-rmi4-ts.idc:system/usr/idc/synaptics-rmi4-ts.idc
 
+# Camera
+PRODUCT_COPY_FILES += \
+    device/zte/common/prebuilt/lib/libcamera.so:system/lib/libcamera.so \
+    device/zte/common/prebuilt/lib/libcameraservice.so:system/lib/libcameraservice.so \
+    device/zte/common/prebuilt/lib/libcamera_client.so:system/lib/libcamera_client.so \
+    device/zte/common/prebuilt/lib/libcamera.so:obj/lib/libcamera.so \
+    device/zte/common/prebuilt/lib/libcameraservice.so:obj/lib/libcameraservice.so \
+    device/zte/common/prebuilt/lib/libcamera_client.so:obj/lib/libcamera_client.so
+
 # RIL
 PRODUCT_COPY_FILES += \
     device/zte/common/prebuilt/lib/libril.so:system/lib/libril.so \
