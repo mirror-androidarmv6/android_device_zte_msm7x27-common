@@ -91,7 +91,9 @@ PRODUCT_COPY_FILES += \
     device/zte/common/prebuilt/lib/libcamera_client.so:system/lib/libcamera_client.so \
     device/zte/common/prebuilt/lib/libcamera.so:obj/lib/libcamera.so \
     device/zte/common/prebuilt/lib/libcameraservice.so:obj/lib/libcameraservice.so \
-    device/zte/common/prebuilt/lib/libcamera_client.so:obj/lib/libcamera_client.so
+    device/zte/common/prebuilt/lib/libcamera_client.so:obj/lib/libcamera_client.so \
+    device/zte/common/prebuilt/lib/liboemcamera.so:obj/lib/liboemcamera.so \
+    device/zte/common/prebuilt/lib/liboemcamera.so:system/lib/liboemcamera.so
 
 # RIL
 PRODUCT_COPY_FILES += \

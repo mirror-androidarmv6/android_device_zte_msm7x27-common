@@ -16,7 +16,7 @@
 
 #define LOG_TAG "CameraHAL"
 
-#include <CameraHardwareInterface.h>
+#include "CameraHardwareInterface.h"
 #include <hardware/hardware.h>
 #include <hardware/camera.h>
 #include <binder/IMemory.h>
