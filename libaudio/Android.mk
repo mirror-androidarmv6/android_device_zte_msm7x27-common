@@ -24,10 +24,10 @@ ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),skate)
 LOCAL_MODULE := audio_policy.skate
 include $(BUILD_SHARED_LIBRARY)
 else ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),blade)
-LOCAL_MODULE := audio.primary.blade
+LOCAL_MODULE := audio_policy.blade
 include $(BUILD_SHARED_LIBRARY)
 else ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),blade2)
-LOCAL_MODULE := audio.primary.blade2
+LOCAL_MODULE := audio_policy.blade2
 include $(BUILD_SHARED_LIBRARY)
 endif
 
