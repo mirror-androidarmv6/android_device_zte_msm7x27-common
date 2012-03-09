@@ -14,12 +14,12 @@ LOCAL_C_INCLUDES       := frameworks/base/services/ frameworks/base/include
 LOCAL_C_INCLUDES       += hardware/libhardware/include/ hardware/libhardware/modules/gralloc/
 
 ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),skate)
-LOCAL_MODULE         := camera.skate
+LOCAL_MODULE := camera.skate
 include $(BUILD_SHARED_LIBRARY)
 else ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),blade)
-LOCAL_MODULE         := camera.blade
+LOCAL_MODULE := camera.blade
 include $(BUILD_SHARED_LIBRARY)
 else ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),blade2)
-LOCAL_MODULE         := camera.blade2
+LOCAL_MODULE := camera.blade2
 include $(BUILD_SHARED_LIBRARY)
 endif
