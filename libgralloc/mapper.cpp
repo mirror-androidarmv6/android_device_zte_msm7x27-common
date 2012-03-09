@@ -32,7 +32,7 @@
 #include <cutils/ashmem.h>
 
 #include <hardware/hardware.h>
-#include <hardware/gralloc.h>
+#include "gralloc.h"
 
 #include <linux/android_pmem.h>
 
