@@ -65,6 +65,8 @@ TARGET_PROVIDES_LIBAUDIO := true
 # Recovery
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/zte/common/recovery/recovery_keys.c
 BOARD_CUSTOM_GRAPHICS := ../../../device/zte/common/recovery/graphics.c
+TARGET_RECOVERY_INITRC := device/zte/common/recovery/recovery.rc
+BOARD_TOUCH_RECOVERY := true
 
 # USB 
 BOARD_DATA_DEVICE := /dev/block/mtdblock6	
