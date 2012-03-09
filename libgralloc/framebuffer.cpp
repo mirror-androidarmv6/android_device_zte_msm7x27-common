@@ -24,7 +24,7 @@
 #include <cutils/properties.h>
 
 #include <hardware/hardware.h>
-#include <hardware/gralloc.h>
+#include "gralloc.h"
 
 #include <fcntl.h>
 #include <errno.h>
