@@ -62,6 +62,10 @@ BOARD_USE_LEGACY_TOUCHSCREEN := true
 TARGET_PROVIDES_LIBRIL := true
 TARGET_PROVIDES_LIBAUDIO := true
 
+# Recovery
+BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/zte/common/recovery/recovery_keys.c
+BOARD_CUSTOM_GRAPHICS := ../../../device/zte/common/recovery/graphics.c
+
 # USB 
 BOARD_DATA_DEVICE := /dev/block/mtdblock6	
 BOARD_DATA_FILESYSTEM := auto  	

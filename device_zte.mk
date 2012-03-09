@@ -63,6 +63,10 @@ PRODUCT_COPY_FILES += \
     device/zte/common/prebuilt/lib/egl/libGLESv2_adreno200.so:system/lib/egl/libGLESv2_adreno200.so \
     device/zte/common/prebuilt/lib/egl/libq3dtools_adreno200.so:system/lib/egl/libq3dtools_adreno200.so
 
+# Audio
+PRODUCT_COPY_FILES += \
+    device/zte/common/prebuilt/etc/AutoVolumeControl.txt:system/etc/AutoVolumeControl.txt
+
 # Install the features available on this device.
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
@@ -73,11 +77,10 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
     frameworks/base/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
-# WiFi and Audio
+# WiFi
 PRODUCT_COPY_FILES += \
     device/zte/common/prebuilt/etc/dhcpcd/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \
-    device/zte/common/prebuilt/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
-    device/zte/common/prebuilt/etc/AutoVolumeControl.txt:system/etc/AutoVolumeControl.txt
+    device/zte/common/prebuilt/etc/wifi/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
 # Vold and Touchscren
 PRODUCT_COPY_FILES += \
