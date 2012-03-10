@@ -4,7 +4,6 @@ LOCAL_PATH := $(call my-dir)
 # hw/<OVERLAY_HARDWARE_MODULE_ID>.<ro.product.board>.so
 include $(CLEAR_VARS)
 LOCAL_PRELINK_MODULE := false
-LOCAL_MODULE := hwcomposer.blade
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
 LOCAL_MODULE_TAGS := optional
 LOCAL_SHARED_LIBRARIES := liblog libcutils libEGL libhardware libutils
@@ -20,11 +19,13 @@ LOCAL_C_INCLUDES += hardware/qcom/display/libcopybit
 LOCAL_C_INCLUDES += hardware/qcom/display/libgenlock
 LOCAL_C_INCLUDES += hardware/qcom/display/libqcomui
 
-#ifeq ($(TARGET_QCOM_HDMI_OUT),true)
-#LOCAL_CFLAGS += -DHDMI_DUAL_DISPLAY -DQCOM_HDMI_OUT
-#endif
-#ifeq ($(TARGET_USE_HDMI_AS_PRIMARY),true)
-##LOCAL_CFLAGS += -DHDMI_AS_PRIMARY
-#endif
-
+ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),skate)
+LOCAL_MODULE := hwcomposer.skate
 include $(BUILD_SHARED_LIBRARY)
+else ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),blade)
+LOCAL_MODULE := hwcomposer.blade
+include $(BUILD_SHARED_LIBRARY)
+else ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),blade2)
+LOCAL_MODULE := hwcomposer.blade2
+include $(BUILD_SHARED_LIBRARY)
+endif

@@ -32,9 +32,7 @@ BOARD_HAS_FLIPPED_SCREEN := true
 TARGET_SPECIFIC_HEADER_PATH := device/zte/common/include
 BOARD_EGL_CFG := device/zte/common/prebuilt/lib/egl/egl.cfg
 TARGET_FORCE_CPU_UPLOAD := true
-TARGET_USES_GENLOCK := false
-TARGET_USES_OVERLAY := false
-TARGET_USES_C2D_COMPOSITION := false
+TARGET_USES_GENLOCK := true
 
 # Skia
 BOARD_USE_SKIA_LCDTEXT := true
@@ -66,7 +64,6 @@ TARGET_PROVIDES_LIBAUDIO := true
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/zte/common/recovery/recovery_keys.c
 BOARD_CUSTOM_GRAPHICS := ../../../device/zte/common/recovery/graphics.c
 TARGET_RECOVERY_INITRC := device/zte/common/recovery/recovery.rc
-BOARD_TOUCH_RECOVERY := true
 
 # USB 
 BOARD_DATA_DEVICE := /dev/block/mtdblock6	
