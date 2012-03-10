@@ -32,6 +32,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Gallery2 \
     hwcomposer.default \
+    libcamera \
     ZteParts \
     abtfilt \
     prox_cal \
@@ -75,7 +76,8 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
     frameworks/base/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
     frameworks/base/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
-    frameworks/base/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
+    frameworks/base/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
+    packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:/system/etc/permissions/android.software.live_wallpaper.xml
 
 # WiFi
 PRODUCT_COPY_FILES += \
@@ -90,14 +92,14 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_COPY_FILES += \
-    device/zte/common/prebuilt/lib/libcamera.so:system/lib/libcamera.so \
     device/zte/common/prebuilt/lib/libcameraservice.so:system/lib/libcameraservice.so \
     device/zte/common/prebuilt/lib/libcamera_client.so:system/lib/libcamera_client.so \
-    device/zte/common/prebuilt/lib/libcamera.so:obj/lib/libcamera.so \
     device/zte/common/prebuilt/lib/libcameraservice.so:obj/lib/libcameraservice.so \
     device/zte/common/prebuilt/lib/libcamera_client.so:obj/lib/libcamera_client.so \
     device/zte/common/prebuilt/lib/liboemcamera.so:obj/lib/liboemcamera.so \
     device/zte/common/prebuilt/lib/liboemcamera.so:system/lib/liboemcamera.so
+#    device/zte/common/prebuilt/lib/libcamera.so:system/lib/libcamera.so
+#    device/zte/common/prebuilt/lib/libcamera.so:obj/lib/libcamera.so
 
 # RIL
 PRODUCT_COPY_FILES += \
