@@ -12,30 +12,37 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Use this flag until pmem/ashmem is implemented in the new gralloc
+LOCAL_PATH := $(call my-dir)
 
-LOCAL_PATH:= $(call my-dir)
 # HAL module implemenation, not prelinked and stored in
-# hw/<COPYPIX_HARDWARE_MODULE_ID>.<ro.board.platform>.so
+# hw/<OVERLAY_HARDWARE_MODULE_ID>.<ro.product.board>.so
 include $(CLEAR_VARS)
-
-LOCAL_CFLAGS += -DUSE_ASHMEM
-LOCAL_CFLAGS += -DTARGET_7x27
-
 LOCAL_PRELINK_MODULE := false
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
-LOCAL_SHARED_LIBRARIES := liblog
-LOCAL_SRC_FILES := software_converter.cpp copybit.cpp
+LOCAL_SHARED_LIBRARIES := liblog libcutils libGLESv1_CM libutils libmemalloc
+LOCAL_SHARED_LIBRARIES += libgenlock
+LOCAL_C_INCLUDES += hardware/qcom/display/libgenlock
+LOCAL_SRC_FILES :=  framebuffer.cpp \
+                    gpu.cpp         \
+                    gralloc.cpp     \
+                    mapper.cpp
+
 LOCAL_MODULE_TAGS := optional
-LOCAL_C_INCLUDES += hardware/qcom/display/libgralloc
-LOCAL_CFLAGS += -DCOPYBIT_MSM7K=1
+LOCAL_CFLAGS:= -DLOG_TAG=\"$(TARGET_BOARD_PLATFORM).gralloc\" -DHOST -DDEBUG_CALC_FPS
+LOCAL_CFLAGS += -DQCOM_HARDWARE
+
+LOCAL_CFLAGS += -DTARGET_MSM7x27
+
+LOCAL_CFLAGS += -DUSE_ASHMEM
 
 ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),skate)
-LOCAL_MODULE := copybit.skate
+LOCAL_MODULE := gralloc.skate
 include $(BUILD_SHARED_LIBRARY)
 else ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),blade)
-LOCAL_MODULE := copybit.blade
+LOCAL_MODULE := gralloc.blade
 include $(BUILD_SHARED_LIBRARY)
 else ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),blade2)
-LOCAL_MODULE := copybit.blade2
+LOCAL_MODULE := gralloc.blade2
 include $(BUILD_SHARED_LIBRARY)
 endif

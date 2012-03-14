@@ -32,7 +32,13 @@ BOARD_HAS_FLIPPED_SCREEN := true
 TARGET_SPECIFIC_HEADER_PATH := device/zte/common/include
 BOARD_EGL_CFG := device/zte/common/prebuilt/lib/egl/egl.cfg
 TARGET_FORCE_CPU_UPLOAD := true
-TARGET_USES_GENLOCK := true
+TARGET_USES_GENLOCK := false
+# msm7x27: no support for overlay, bypass, or c2d
+TARGET_USE_OVERLAY      := false
+TARGET_HAVE_BYPASS      := false
+TARGET_USES_C2D_COMPOSITION := false
+# Allow fallback to ashmem
+TARGET_GRALLOC_USES_ASHMEM := true
 
 # Skia
 BOARD_USE_SKIA_LCDTEXT := true
