@@ -68,11 +68,11 @@ enum {
     GRALLOC_USAGE_PRIVATE_ION             =       0x00020000,
 };
 
-//enum {
-//   /* Gralloc perform enums
-//    */
-//    GRALLOC_MODULE_PERFORM_CREATE_HANDLE_FROM_BUFFER = 0x080000001,
-//};
+enum {
+   /* Gralloc perform enums
+   */
+    GRALLOC_MODULE_PERFORM_CREATE_HANDLE_FROM_BUFFER = 0x080000001,
+};
 
 
 enum {
