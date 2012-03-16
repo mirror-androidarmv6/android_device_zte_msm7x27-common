@@ -39,6 +39,7 @@ TARGET_HAVE_BYPASS      := false
 TARGET_USES_C2D_COMPOSITION := false
 # Allow fallback to ashmem
 TARGET_GRALLOC_USES_ASHMEM := true
+TARGET_BOOTANIMATION_NAME := vertical-480x800
 
 # Skia
 BOARD_USE_SKIA_LCDTEXT := true
