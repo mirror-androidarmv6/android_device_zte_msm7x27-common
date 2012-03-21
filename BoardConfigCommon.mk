@@ -34,8 +34,8 @@ BOARD_EGL_CFG := device/zte/common/prebuilt/lib/egl/egl.cfg
 TARGET_FORCE_CPU_UPLOAD := true
 TARGET_USES_GENLOCK := false
 # msm7x27: no support for overlay, bypass, or c2d
-TARGET_USE_OVERLAY      := false
-TARGET_HAVE_BYPASS      := false
+TARGET_USE_OVERLAY := false
+TARGET_HAVE_BYPASS := false
 TARGET_USES_C2D_COMPOSITION := false
 # Allow fallback to ashmem
 TARGET_GRALLOC_USES_ASHMEM := true
@@ -55,6 +55,7 @@ BOARD_HAVE_BLUETOOTH := true
 JS_ENGINE := v8
 HTTP := chrome
 WITH_JIT := true
+ENABLE_JSC_JIT := true
 
 # QCOM
 BOARD_USES_QCOM_HARDWARE := true
