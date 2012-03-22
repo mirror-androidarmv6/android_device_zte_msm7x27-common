@@ -31,7 +31,6 @@ PRODUCT_PACKAGES += \
 # Misc
 PRODUCT_PACKAGES += \
     Gallery2 \
-    hwcomposer.default \
     ZteParts \
     abtfilt \
     prox_cal \
@@ -99,6 +98,14 @@ PRODUCT_COPY_FILES += \
     device/zte/common/prebuilt/lib/liboemcamera.so:system/lib/liboemcamera.so \
     device/zte/common/prebuilt/lib/libcamera.so:system/lib/libcamera.so \
     device/zte/common/prebuilt/lib/libcamera.so:obj/lib/libcamera.so
+
+# Hw libs (from Tom G as I can't get ones that I compiled to work)
+PRODUCT_COPY_FILES += \
+    device/zte/skate/prebuilt/lib/hw/gralloc.msm7x27.so:system/lib/hw/gralloc.msm7x27.so \
+    device/zte/skate/prebuilt/lib/hw/camera.msm7x27.so:system/lib/hw/camera.msm7x27.so \
+    device/zte/skate/prebuilt/lib/hw/lights.msm7x27.so:system/lib/hw/lights.msm7x27.so \
+    device/zte/skate/prebuilt/lib/hw/hwcomposer.msm7x27.so:system/lib/hw/hwcomposer.msm7x27.so \
+    device/zte/skate/prebuilt/lib/hw/copybit.msm7x27.so:system/lib/hw/copybit.msm7x27.so
 
 # RIL
 PRODUCT_COPY_FILES += \
