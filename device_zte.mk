@@ -105,7 +105,6 @@ PRODUCT_COPY_FILES += \
     device/zte/common/prebuilt/lib/hw/gralloc.msm7x27.so:system/lib/hw/gralloc.msm7x27.so \
     device/zte/common/prebuilt/lib/hw/camera.msm7x27.so:system/lib/hw/camera.msm7x27.so \
     device/zte/common/prebuilt/lib/hw/lights.msm7x27.so:system/lib/hw/lights.msm7x27.so \
-    device/zte/common/prebuilt/lib/hw/hwcomposer.msm7x27.so:system/lib/hw/hwcomposer.msm7x27.so \
     device/zte/common/prebuilt/lib/hw/copybit.msm7x27.so:system/lib/hw/copybit.msm7x27.so
 
 # RIL
