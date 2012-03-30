@@ -21,7 +21,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/system/lib/libril-qc-1.so \
     rild.libargs=-d /dev/smd0 \
-    ro.telephony.ril.v3=icccardstatus,datacall,signalstrength,facilitylock
+    ro.telephony.ril.v3=signalstrength,singlepdp
 
 # USB
 PRODUCT_PROPERTY_OVERRIDES += \

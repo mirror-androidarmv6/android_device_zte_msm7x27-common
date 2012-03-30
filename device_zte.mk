@@ -20,17 +20,23 @@ PRODUCT_MANUFACTURER := ZTE
 
 $(call inherit-product, device/zte/common/build_prop.mk)
 
-# HW decoding
+# GPU
+PRODUCT_PACKAGES += \
+    libgenlock \
+    libmemalloc \
+    libtilerenderer \
+    libQcomUI
+
+# Omx
 PRODUCT_PACKAGES += \
     libmm-omxcore \
-    libstagefrighthw \
     libopencorehw \
     libOmxCore \
-    libOmxVidEnc
+    libOmxVidEnc \
+    libstagefrighthw
 
 # Misc
 PRODUCT_PACKAGES += \
-    Gallery2 \
     ZteParts \
     abtfilt \
     prox_cal \
