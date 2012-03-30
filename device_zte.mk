@@ -32,7 +32,6 @@ PRODUCT_PACKAGES += \
     libmm-omxcore \
     libopencorehw \
     libOmxCore \
-    libOmxVidEnc \
     libstagefrighthw
 
 # Misc
