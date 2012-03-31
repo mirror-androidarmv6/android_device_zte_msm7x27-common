@@ -21,31 +21,6 @@ TARGET_CPU_ABI := armeabi
 TARGET_ARCH_VARIANT := armv6-vfp
 ARCH_ARM_HAVE_VFP := true
 
-# Graphics
-TARGET_BOARD_PLATFORM_GPU := adreno200
-USE_OPENGL_RENDERER := true
-BOARD_NO_ALLOW_DEQUEUE_CURRENT_BUFFER := true
-COMMON_GLOBAL_CFLAGS += -DMISSING_GRALLOC_BUFFERS
-COMMON_GLOBAL_CFLAGS += -DREFRESH_RATE=60 -DQCOM_HARDWARE -DFORCE_CPU_UPLOAD
-TARGET_FORCE_CPU_UPLOAD := true
-BOARD_HAS_FLIPPED_SCREEN := true
-TARGET_SPECIFIC_HEADER_PATH := device/zte/common/include
-BOARD_EGL_CFG := device/zte/common/prebuilt/lib/egl/egl.cfg
-TARGET_USES_GENLOCK := false
-# msm7x27: no support for overlay, bypass, or c2d
-TARGET_USE_OVERLAY := false
-TARGET_HAVE_BYPASS := false
-TARGET_USES_C2D_COMPOSITION := false
-# Allow fallback to ashmem
-TARGET_GRALLOC_USES_ASHMEM := true
-
-#Enable gingerbread compatibility (http://r.cyanogenmod.com/#change,13317)
-COMMON_GLOBAL_CFLAGS += -DBINDER_COMPAT
-
-# Skia
-BOARD_USE_SKIA_LCDTEXT := true
-BOARD_NO_ALLOW_DEQUEUE_CURRENT_BUFFER := true
-
 # Kernel
 BOARD_KERNEL_BASE := 0x02600000
 
@@ -60,15 +35,44 @@ WITH_JIT := true
 # QCOM
 BOARD_USES_QCOM_HARDWARE := true
 BOARD_USES_QCOM_LIBS := true
+COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE 
 
-# Sensors
+# Touchscreen
 BOARD_USE_LEGACY_TOUCHSCREEN := true
+
+# CPU
+TARGET_FORCE_CPU_UPLOAD := true
+COMMON_GLOBAL_CFLAGS += -DFORCE_CPU_UPLOAD
+
+# Headers
+TARGET_SPECIFIC_HEADER_PATH := device/zte/common/include
+
+# Graphics
+TARGET_BOARD_PLATFORM_GPU := adreno200
+BOARD_EGL_CFG := device/zte/common/prebuilt/lib/egl/egl.cfg
+BOARD_HAS_FLIPPED_SCREEN := true
+USE_OPENGL_RENDERER := true
+COMMON_GLOBAL_CFLAGS += -DMISSING_GRALLOC_BUFFERS -DREFRESH_RATE=60
+TARGET_USES_GENLOCK := false
+# msm7x27: no support for overlay, bypass, or c2d
+TARGET_USE_OVERLAY := false
+TARGET_HAVE_BYPASS := false
+TARGET_USES_C2D_COMPOSITION := false
+# Allow fallback to ashmem
+TARGET_GRALLOC_USES_ASHMEM := true
+BOARD_NO_ALLOW_DEQUEUE_CURRENT_BUFFER := true
+
+# Enable gingerbread compatibility (http://r.cyanogenmod.com/#change,13317)
+COMMON_GLOBAL_CFLAGS += -DBINDER_COMPAT
+
+# Skia
+BOARD_USE_SKIA_LCDTEXT := true
 
 # FM radio
 BOARD_HAVE_FM_RADIO := true
 BOARD_GLOBAL_CFLAGS += -DHAVE_FM_RADIO
 
-# Target libs check
+# Libs
 TARGET_PROVIDES_LIBRIL := true
 TARGET_PROVIDES_LIBAUDIO := true
 

@@ -10,10 +10,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.hw=1 \
     debug.composition.type=mdp \
     debug.gr.numframebuffers=2 \
+    persist.sys.use_dithering=0 \
+    persist.sys.use_16bpp_alpha=1 \
     debug.composition.type=hdpi
 
-# HardwareRenderer properties
-# dirty_regions: "false" to disable partial invalidates, override if enabletr=true
+# Hardware Renderer
 PRODUCT_PROPERTY_OVERRIDES += \
     hwui.render_dirty_regions=false \
     hwui.disable_vsync=true \
