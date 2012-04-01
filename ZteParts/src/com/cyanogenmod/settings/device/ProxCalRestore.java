@@ -1,4 +1,4 @@
-package com.cyanogenmod.ZteParts;
+package com.cyanogenmod.settings.device;
 
 import java.io.File;
 

@@ -20,23 +20,33 @@ PRODUCT_MANUFACTURER := ZTE
 
 $(call inherit-product, device/zte/common/build_prop.mk)
 
-# GPU
-PRODUCT_PACKAGES += \
-    libgenlock
+PRODUCT_AAPT_CONFIG := normal hdpi
+PRODUCT_AAPT_PREF_CONFIG := hdpi
 
-# Omx
+PRODUCT_PACKAGES := \
+        ZteParts \
+        libmm-omxcore \
+        libOmxCore \
+        libOmxVdec \
+        libOmxVenc \
+        libstagefrighthw \
+        dexpreopt \
+        camera.msm7x27 \
+        gralloc.msm7x27 \
+        copybit.msm7x27 \
+        lights.msm7x27 \
+        hwcomposer.msm7x27
+
 PRODUCT_PACKAGES += \
-    libmm-omxcore \
-    libopencorehw \
-    libOmxCore \
-    libstagefrighthw
+        audio.primary.msm7x27 \
+        audio_policy.msm7x27 \
+        audio.a2dp.default \
+        libaudioutils
 
 # Misc
 PRODUCT_PACKAGES += \
-    ZteParts \
     abtfilt \
-    prox_cal \
-    dexpreopt
+    prox_cal
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -93,26 +103,26 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_COPY_FILES += \
-    device/zte/common/prebuilt/lib/libcameraservice.so:system/lib/libcameraservice.so \
-    device/zte/common/prebuilt/lib/libcameraservice.so:obj/lib/libcameraservice.so \
-    device/zte/common/prebuilt/lib/libcamera_client.so:system/lib/libcamera_client.so \
-    device/zte/common/prebuilt/lib/libcamera_client.so:obj/lib/libcamera_client.so \
     device/zte/common/prebuilt/lib/liboemcamera.so:system/lib/liboemcamera.so \
-    device/zte/common/prebuilt/lib/liboemcamera.so:obj/lib/liboemcamera.so \
-    device/zte/common/prebuilt/lib/libcamera.so:system/lib/libcamera.so \
-    device/zte/common/prebuilt/lib/libcamera.so:obj/lib/libcamera.so
+    device/zte/common/prebuilt/lib/liboemcamera.so:obj/lib/liboemcamera.so
+#    device/zte/common/prebuilt/lib/libcameraservice.so:system/lib/libcameraservice.so \
+#    device/zte/common/prebuilt/lib/libcameraservice.so:obj/lib/libcameraservice.so \
+#    device/zte/common/prebuilt/lib/libcamera_client.so:system/lib/libcamera_client.so \
+#    device/zte/common/prebuilt/lib/libcamera_client.so:obj/lib/libcamera_client.so \
+#    device/zte/common/prebuilt/lib/libcamera.so:system/lib/libcamera.so \
+#    device/zte/common/prebuilt/lib/libcamera.so:obj/lib/libcamera.so
 
 # Hw libs (from Tom G as I can't get ones that I compiled to work)
-PRODUCT_COPY_FILES += \
-    device/zte/common/prebuilt/lib/hw/camera.msm7x27.so:system/lib/hw/camera.msm7x27.so \
-    device/zte/common/prebuilt/lib/hw/gralloc.msm7x27.so:system/lib/hw/gralloc.msm7x27.so \
-    device/zte/common/prebuilt/lib/hw/lights.msm7x27.so:system/lib/hw/lights.msm7x27.so \
-    device/zte/common/prebuilt/lib/hw/copybit.msm7x27.so:system/lib/hw/copybit.msm7x27.so
+#PRODUCT_COPY_FILES += \
+#    device/zte/common/prebuilt/lib/hw/camera.msm7x27.so:system/lib/hw/camera.msm7x27.so \
+#    device/zte/common/prebuilt/lib/hw/gralloc.msm7x27.so:system/lib/hw/gralloc.msm7x27.so \
+#    device/zte/common/prebuilt/lib/hw/lights.msm7x27.so:system/lib/hw/lights.msm7x27.so \
+#    device/zte/common/prebuilt/lib/hw/copybit.msm7x27.so:system/lib/hw/copybit.msm7x27.so
 
 # RIL
-PRODUCT_COPY_FILES += \
-    device/zte/common/prebuilt/lib/libril.so:system/lib/libril.so \
-    device/zte/common/prebuilt/lib/libril.so:obj/lib/libril.so
+#PRODUCT_COPY_FILES += \
+#    device/zte/common/prebuilt/lib/libril.so:system/lib/libril.so \
+#    device/zte/common/prebuilt/lib/libril.so:obj/lib/libril.so
 
 # Goo Manager
 PRODUCT_COPY_FILES += \

@@ -3,17 +3,15 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE_TAGS := optional
 
+LOCAL_STATIC_JAVA_LIBRARIES := android-support-v13
+
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
 
 LOCAL_PACKAGE_NAME := ZteParts
 LOCAL_CERTIFICATE := platform
 
-ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),skate)
+LOCAL_REQUIRED_MODULES := prox_cal
+
 include $(BUILD_PACKAGE)
-else ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),blade)
-include $(BUILD_PACKAGE)
-else ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),blade2)
-include $(BUILD_PACKAGE)
-endif
 
 include $(call all-makefiles-under,$(LOCAL_PATH))

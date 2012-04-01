@@ -27,9 +27,9 @@
 #include <utils/threads.h>
 
 #include <ui/PixelFormat.h>
-#include <ui/IOverlay.h>
+#include "IOverlay.h"
 
-#include <hardware/overlay.h>
+#include "overlay.h"
 
 namespace android {
 
