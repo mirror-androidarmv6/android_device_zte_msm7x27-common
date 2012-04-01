@@ -4,22 +4,20 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.hwrotation=180 \
     qemu.sf.lcd_density=240 \
     ro.media.dec.jpeg.memcap=20000000 \
-    ro.opengles.version=131072 \
-    debug.performance.tuning=1 \
-    video.accelerate.hw=1 \
-    debug.sf.hw=1 \
-    debug.composition.type=mdp \
-    debug.gr.numframebuffers=2 \
-    persist.sys.use_dithering=0 \
-    persist.sys.use_16bpp_alpha=1 \
-    debug.composition.type=hdpi
+    ro.opengles.version=131072
+#    debug.performance.tuning=1 \
+#    video.accelerate.hw=1 \
+#    debug.sf.hw=1 \
+#    debug.composition.type=mdp \
+#    debug.gr.numframebuffers=2 \
+#    debug.composition.type=hdpi
 
 # Hardware Renderer
-PRODUCT_PROPERTY_OVERRIDES += \
-    hwui.render_dirty_regions=false \
-    hwui.disable_vsync=true \
-    hwui.print_config=choice \
-    debug.enabletr=false
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    hwui.render_dirty_regions=false \
+#    hwui.disable_vsync=true \
+#    hwui.print_config=choice \
+#    debug.enabletr=false
 
 # WiFi
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -30,6 +28,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     rild.libpath=/system/lib/libril-qc-1.so \
     rild.libargs=-d /dev/smd0 \
+    com.qc.hardware=true \
     ro.telephony.ril.v3=icccardstatus,datacall,signalstrength,facilitylock,singlepdp
 
 # USB
