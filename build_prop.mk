@@ -4,12 +4,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.hwrotation=180 \
     qemu.sf.lcd_density=240 \
     ro.media.dec.jpeg.memcap=20000000 \
-    ro.opengles.version=131072
+    ro.opengles.version=131072 \
+    debug.gr.numframebuffers=2
 #    debug.performance.tuning=1 \
 #    video.accelerate.hw=1 \
 #    debug.sf.hw=1 \
 #    debug.composition.type=mdp \
-#    debug.gr.numframebuffers=2 \
 #    debug.composition.type=hdpi
 
 # Hardware Renderer

@@ -52,7 +52,7 @@ TARGET_SPECIFIC_HEADER_PATH := device/zte/common/include
 # Graphics
 BOARD_EGL_CFG := device/zte/common/prebuilt/lib/egl/egl.cfg
 USE_OPENGL_RENDERER := true
-COMMON_GLOBAL_CFLAGS += -DREFRESH_RATE=60
+COMMON_GLOBAL_CFLAGS += -DMISSING_GRALLOC_BUFFERS -DREFRESH_RATE=60
 TARGET_USES_GENLOCK := true
 
 # Libs
