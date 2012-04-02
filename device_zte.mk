@@ -32,7 +32,6 @@ PRODUCT_PACKAGES := \
         libstagefrighthw \
         dexpreopt \
         camera.msm7x27 \
-        gralloc.msm7x27 \
         copybit.msm7x27 \
         lights.msm7x27 \
         hwcomposer.msm7x27
@@ -113,9 +112,9 @@ PRODUCT_COPY_FILES += \
 #    device/zte/common/prebuilt/lib/libcamera.so:obj/lib/libcamera.so
 
 # Hw libs (from Tom G as I can't get ones that I compiled to work)
-#PRODUCT_COPY_FILES += \
+PRODUCT_COPY_FILES += \
+    device/zte/common/prebuilt/lib/hw/gralloc.msm7x27.so:system/lib/hw/gralloc.msm7x27.so
 #    device/zte/common/prebuilt/lib/hw/camera.msm7x27.so:system/lib/hw/camera.msm7x27.so \
-#    device/zte/common/prebuilt/lib/hw/gralloc.msm7x27.so:system/lib/hw/gralloc.msm7x27.so \
 #    device/zte/common/prebuilt/lib/hw/lights.msm7x27.so:system/lib/hw/lights.msm7x27.so \
 #    device/zte/common/prebuilt/lib/hw/copybit.msm7x27.so:system/lib/hw/copybit.msm7x27.so
 
