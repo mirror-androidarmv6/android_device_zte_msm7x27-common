@@ -28,6 +28,7 @@ PRODUCT_PACKAGES := \
         libmm-omxcore \
         libOmxCore \
         libOmxVdec \
+        libcamera \
         libOmxVenc \
         libstagefrighthw \
         dexpreopt \
@@ -104,24 +105,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/zte/common/prebuilt/lib/liboemcamera.so:system/lib/liboemcamera.so \
     device/zte/common/prebuilt/lib/liboemcamera.so:obj/lib/liboemcamera.so
-#    device/zte/common/prebuilt/lib/libcameraservice.so:system/lib/libcameraservice.so \
-#    device/zte/common/prebuilt/lib/libcameraservice.so:obj/lib/libcameraservice.so \
-#    device/zte/common/prebuilt/lib/libcamera_client.so:system/lib/libcamera_client.so \
-#    device/zte/common/prebuilt/lib/libcamera_client.so:obj/lib/libcamera_client.so \
-#    device/zte/common/prebuilt/lib/libcamera.so:system/lib/libcamera.so \
-#    device/zte/common/prebuilt/lib/libcamera.so:obj/lib/libcamera.so
 
-# Hw libs (from Tom G as I can't get ones that I compiled to work)
+# Gralloc lib (from Tom G as I can't get ones that I compiled to work)
 PRODUCT_COPY_FILES += \
     device/zte/common/prebuilt/lib/hw/gralloc.msm7x27.so:system/lib/hw/gralloc.msm7x27.so
-#    device/zte/common/prebuilt/lib/hw/camera.msm7x27.so:system/lib/hw/camera.msm7x27.so \
-#    device/zte/common/prebuilt/lib/hw/lights.msm7x27.so:system/lib/hw/lights.msm7x27.so \
-#    device/zte/common/prebuilt/lib/hw/copybit.msm7x27.so:system/lib/hw/copybit.msm7x27.so
-
-# RIL
-#PRODUCT_COPY_FILES += \
-#    device/zte/common/prebuilt/lib/libril.so:system/lib/libril.so \
-#    device/zte/common/prebuilt/lib/libril.so:obj/lib/libril.so
 
 # Goo Manager
 PRODUCT_COPY_FILES += \
