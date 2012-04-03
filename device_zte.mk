@@ -24,24 +24,24 @@ PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 PRODUCT_PACKAGES := \
-        ZteParts \
-        libmm-omxcore \
-        libOmxCore \
-        libOmxVdec \
-        libcamera \
-        libOmxVenc \
-        libstagefrighthw \
-        dexpreopt \
-        camera.msm7x27 \
-        copybit.msm7x27 \
-        lights.msm7x27 \
-        hwcomposer.msm7x27
+    ZteParts \
+    libmm-omxcore \
+    libOmxCore \
+    libOmxVdec \
+    libcamera \
+    libOmxVenc \
+    libstagefrighthw \
+    dexpreopt \
+    camera.msm7x27 \
+    copybit.msm7x27 \
+    lights.msm7x27 \
+    hwcomposer.msm7x27
 
 PRODUCT_PACKAGES += \
-        audio.primary.msm7x27 \
-        audio_policy.msm7x27 \
-        audio.a2dp.default \
-        libaudioutils
+    audio.primary.msm7x27 \
+    audio_policy.msm7x27 \
+    audio.a2dp.default \
+    libaudioutils
 
 # Misc
 PRODUCT_PACKAGES += \
@@ -68,11 +68,23 @@ PRODUCT_COPY_FILES += \
 
 # Graphics
 PRODUCT_COPY_FILES += \
+    device/zte/common/prebuilt/lib/libOpenVG.so:system/lib/libOpenVG.so \
     device/zte/common/prebuilt/lib/libgsl.so:system/lib/libgsl.so \
+    device/zte/common/prebuilt/lib/libC2D2.so:system/lib/libC2D2.so \
+    device/zte/common/prebuilt/lib/libsc-a2xx.so:system/lib/libsc-a2xx.so \
     device/zte/common/prebuilt/lib/egl/libEGL_adreno200.so:system/lib/egl/libEGL_adreno200.so \
     device/zte/common/prebuilt/lib/egl/libGLESv1_CM_adreno200.so:system/lib/egl/libGLESv1_CM_adreno200.so \
     device/zte/common/prebuilt/lib/egl/libGLESv2_adreno200.so:system/lib/egl/libGLESv2_adreno200.so \
-    device/zte/common/prebuilt/lib/egl/libq3dtools_adreno200.so:system/lib/egl/libq3dtools_adreno200.so
+    device/zte/common/prebuilt/lib/egl/libq3dtools_adreno200.so:system/lib/egl/libq3dtools_adreno200.so \
+    device/zte/common/prebuilt/etc/firmware/a225p5_pm4.fw:system/etc/firmware/a225p5_pm4.fw \
+    device/zte/common/prebuilt/etc/firmware/a225_pfp.fw:system/etc/firmware/a225_pfp.fw \
+    device/zte/common/prebuilt/etc/firmware/a225_pm4.fw:system/etc/firmware/a225_pm4.fw \
+    device/zte/common/prebuilt/etc/firmware/a300_pfp.fw:system/etc/firmware/a300_pfp.fw \
+    device/zte/common/prebuilt/etc/firmware/a300_pm4.fw:system/etc/firmware/a300_pm4.fw \
+    device/zte/common/prebuilt/etc/firmware/leia_pfp_470.fw:system/etc/firmware/leia_pfp_470.fw \
+    device/zte/common/prebuilt/etc/firmware/leia_pm4_470.fw:system/etc/firmware/leia_pm4_470.fw \
+    device/zte/common/prebuilt/etc/firmware/yamato_pfp.fw:system/etc/firmware/yamato_pfp.fw \
+    device/zte/common/prebuilt/etc/firmware/yamato_pm4.fw:system/etc/firmware/yamato_pm4.fw
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -105,11 +117,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/zte/common/prebuilt/lib/liboemcamera.so:system/lib/liboemcamera.so \
     device/zte/common/prebuilt/lib/liboemcamera.so:obj/lib/liboemcamera.so
-
-# Gralloc lib (from Tom G as I can't get ones that I compiled to work)
-PRODUCT_COPY_FILES += \
-    device/zte/common/prebuilt/lib/hw/gralloc.msm7x27.so:system/lib/hw/gralloc.msm7x27.so
-
 # Goo Manager
 PRODUCT_COPY_FILES += \
     device/zte/common/prebuilt/app/GooManager.apk:system/app/GooManager.apk
