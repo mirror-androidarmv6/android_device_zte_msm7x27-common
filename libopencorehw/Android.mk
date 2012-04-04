@@ -51,3 +51,4 @@ LOCAL_LDLIBS +=
 ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),zte)
 include $(BUILD_SHARED_LIBRARY)
 endif
+endif
