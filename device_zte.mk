@@ -72,6 +72,7 @@ PRODUCT_COPY_FILES += \
     device/zte/common/prebuilt/lib/libgsl.so:system/lib/libgsl.so \
     device/zte/common/prebuilt/lib/libC2D2.so:system/lib/libC2D2.so \
     device/zte/common/prebuilt/lib/libsc-a2xx.so:system/lib/libsc-a2xx.so \
+    device/zte/common/prebuilt/lib/egl/eglsubAndroid.so:system/lib/egl/eglsubAndroid.so \
     device/zte/common/prebuilt/lib/egl/libEGL_adreno200.so:system/lib/egl/libEGL_adreno200.so \
     device/zte/common/prebuilt/lib/egl/libGLESv1_CM_adreno200.so:system/lib/egl/libGLESv1_CM_adreno200.so \
     device/zte/common/prebuilt/lib/egl/libGLESv2_adreno200.so:system/lib/egl/libGLESv2_adreno200.so \
