@@ -32,6 +32,20 @@
         <item>"bnep\\d"</item>
     </string-array>
 
+<!-- This string array should be overridden by the device to present a list of network
+     attributes.  This is used by the connectivity manager to decide which networks can coexist
+     based on the hardware -->
+<!-- An Array of "[Connection name],[ConnectivityManager connection type],
+     [associated radio-type],[priority]  -->
+
+    <string-array translatable="false" name="networkAttributes">
+        <item>"wifi,1,1,1,-1,true"</item>
+        <item>"mobile,0,0,0,-1,true"</item>
+        <item>"mobile_mms,2,0,2,60000,true"</item>
+        <item>"mobile_supl,3,0,2,60000,true"</item>
+        <item>"mobile_dun,4,0,3,60000,true"</item>
+    </string-array>
+
      <!-- Array of ConnectivityManager.TYPE_xxxx values allowable for tethering -->
     <!-- Common options are [1, 4] for TYPE_WIFI and TYPE_MOBILE_DUN or
     <!== [0,1,5,7] for TYPE_MOBILE, TYPE_WIFI, TYPE_MOBILE_HIPRI and TYPE_BLUETOOTH -->
