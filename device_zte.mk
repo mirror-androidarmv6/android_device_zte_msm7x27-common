@@ -32,25 +32,18 @@ PRODUCT_PACKAGES := \
     libOmxVenc \
     libstagefrighthw \
     dexpreopt \
-    camera.msm7x27 \
-    copybit.msm7x27 \
-    lights.msm7x27 \
-    hwcomposer.msm7x27
-
-PRODUCT_PACKAGES += \
-    audio.primary.msm7x27 \
-    audio_policy.msm7x27 \
+    camera.zte \
+    copybit.zte \
+    lights.zte \
+    sensors.zte \
+    gralloc.zte \
+    hwcomposer.msm7x27 \
+    audio.primary.zte \
+    audio_policy.zte \
     audio.a2dp.default \
-    libaudioutils
-
-# Misc
-PRODUCT_PACKAGES += \
+    libaudioutils \
     abtfilt \
     prox_cal
-
-# Audio
-PRODUCT_PACKAGES += \
-    audio.a2dp.default
 
 PRODUCT_LOCALES := en_GB
 

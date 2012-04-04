@@ -48,11 +48,6 @@ LOCAL_MODULE_TAGS := optional
 
 LOCAL_LDLIBS += 
 
-ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),blade)
+ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),zte)
 include $(BUILD_SHARED_LIBRARY)
-else ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),skate)
-include $(BUILD_SHARED_LIBRARY)
-else ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),blade2)
-include $(BUILD_SHARED_LIBRARY)
-endif
 endif
