@@ -25,6 +25,7 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 PRODUCT_PACKAGES := \
     ZteParts \
+    libopencore \
     libmm-omxcore \
     libOmxCore \
     libOmxVdec \
@@ -33,10 +34,10 @@ PRODUCT_PACKAGES := \
     libstagefrighthw \
     dexpreopt \
     camera.zte \
-    copybit.zte \
+    copybit.msm7x27 \
     lights.zte \
     sensors.zte \
-    gralloc.zte \
+    gralloc.msm7x27 \
     hwcomposer.msm7x27 \
     audio.primary.zte \
     audio_policy.zte \
