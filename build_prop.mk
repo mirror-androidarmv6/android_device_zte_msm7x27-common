@@ -5,19 +5,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     qemu.sf.lcd_density=240 \
     ro.media.dec.jpeg.memcap=20000000 \
     ro.opengles.version=131072 \
-    debug.gr.numframebuffers=2
-#    debug.performance.tuning=1 \
-#    video.accelerate.hw=1 \
-#    debug.sf.hw=1 \
-#    debug.composition.type=mdp \
-#    debug.composition.type=hdpi
-
-# Hardware Renderer
-#PRODUCT_PROPERTY_OVERRIDES += \
-#    hwui.render_dirty_regions=false \
-#    hwui.disable_vsync=true \
-#    hwui.print_config=choice \
-#    debug.enabletr=false
+    debug.gr.numframebuffers=2 \
+    persist.sys.use_dithering=1
 
 # WiFi
 PRODUCT_PROPERTY_OVERRIDES += \
