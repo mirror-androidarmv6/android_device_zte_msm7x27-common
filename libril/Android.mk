@@ -1,7 +1,5 @@
 # Copyright 2006 The Android Open Source Project
 
-MODULE.TARGET.SHARED_LIBRARIES.libril :=
-
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 

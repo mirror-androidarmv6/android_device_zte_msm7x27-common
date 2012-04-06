@@ -24,6 +24,7 @@ PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 PRODUCT_PACKAGES := \
+    libril \
     ZteParts \
     libopencore \
     libmm-omxcore \
