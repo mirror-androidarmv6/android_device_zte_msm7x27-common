@@ -1,4 +1,4 @@
-package com.cyanogenmod.settings.device;
+package com.cyanogenmod.ZteParts;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

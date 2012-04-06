@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-        <string name="app_name"> Zte 設定</string>
+        <string name="app_name">ZTE Zte 設定</string>
         <string name="prox_calibration_title_head">校準距離感應器</string>
         <string name="prox_calibration_summary_head">在執行校準的過程中切勿將任何物件移近螢幕頂部</string>
         <string name="prox_display_title_head">顯示距離感應器數據</string>

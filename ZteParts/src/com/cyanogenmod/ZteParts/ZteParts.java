@@ -1,6 +1,6 @@
-package com.cyanogenmod.settings.device;
+package com.cyanogenmod.ZteParts;
 
-import com.cyanogenmod.settings.device.R;
+import com.cyanogenmod.ZteParts.R;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -12,7 +12,7 @@ import java.io.FileOutputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class DeviceSettings extends PreferenceActivity {
+public class ZteParts extends PreferenceActivity {
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
