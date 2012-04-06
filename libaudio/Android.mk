@@ -12,9 +12,7 @@ LOCAL_SHARED_LIBRARIES := \
 LOCAL_WHOLE_STATIC_LIBRARIES := libaudiopolicy_legacy
 LOCAL_MODULE_TAGS := optional
 LOCAL_STATIC_LIBRARIES := libmedia_helper
-LOCAL_MODULE:= audio_policy.zte
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
-
 
 ifeq ($(BOARD_HAVE_BLUETOOTH),true)
   LOCAL_CFLAGS += -DWITH_A2DP
@@ -22,9 +20,17 @@ endif
 
 include $(BUILD_SHARED_LIBRARY)
 
-include $(CLEAR_VARS)
+ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),skate)
+LOCAL_MODULE := audio_policy.skate
+include $(BUILD_SHARED_LIBRARY)
+else ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),blade)
+LOCAL_MODULE := audio_policy.blade
+include $(BUILD_SHARED_LIBRARY)
+else ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),blade2)
+LOCAL_MODULE := audio_policy.blade2
+include $(BUILD_SHARED_LIBRARY)
+endif
 
-LOCAL_MODULE := audio.primary.zte
 LOCAL_MODULE_TAGS := optional
 LOCAL_STATIC_LIBRARIES := libmedia_helper
 LOCAL_WHOLE_STATIC_LIBRARIES := libaudiohw_legacy
@@ -48,8 +54,13 @@ endif
 LOCAL_SRC_FILES += AudioHardware.cpp
 LOCAL_CFLAGS += -fno-short-enums
 
-#ifeq ($(BOARD_HAVE_BLUETOOTH),true)
-#  LOCAL_SHARED_LIBRARIES += audio.a2dp.default libbinder
-#endif
-
+ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),skate)
+LOCAL_MODULE := audio.primary.skate
 include $(BUILD_SHARED_LIBRARY)
+else ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),blade)
+LOCAL_MODULE := audio.primary.blade
+include $(BUILD_SHARED_LIBRARY)
+else ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),blade2)
+LOCAL_MODULE := audio.primary.blade2
+include $(BUILD_SHARED_LIBRARY)
+endif

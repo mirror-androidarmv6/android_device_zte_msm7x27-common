@@ -24,8 +24,15 @@ LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
 
 LOCAL_SHARED_LIBRARIES := liblog
 
-LOCAL_MODULE := lights.zte
-
 LOCAL_MODULE_TAGS := optional
 
+ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),skate)
+LOCAL_MODULE := lights.skate
 include $(BUILD_SHARED_LIBRARY)
+else ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),blade)
+LOCAL_MODULE := lights.blade
+include $(BUILD_SHARED_LIBRARY)
+else ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),blade2)
+LOCAL_MODULE := lights.blade2
+include $(BUILD_SHARED_LIBRARY)
+endif
