@@ -12,9 +12,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifeq ($(PRODUCT_DEVICE),skate)
 include $(call all-makefiles-under,device/zte/common)
-endif
-ifeq ($(PRODUCT_DEVICE),blade)
-include $(call all-makefiles-under,device/zte/common)
-endif
