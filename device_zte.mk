@@ -113,6 +113,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/zte/common/prebuilt/lib/liboemcamera.so:system/lib/liboemcamera.so \
     device/zte/common/prebuilt/lib/liboemcamera.so:obj/lib/liboemcamera.so
+
 # Goo Manager
 PRODUCT_COPY_FILES += \
     device/zte/common/prebuilt/app/GooManager.apk:system/app/GooManager.apk
