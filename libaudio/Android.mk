@@ -18,8 +18,6 @@ ifeq ($(BOARD_HAVE_BLUETOOTH),true)
   LOCAL_CFLAGS += -DWITH_A2DP
 endif
 
-include $(BUILD_SHARED_LIBRARY)
-
 ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),skate)
 LOCAL_MODULE := audio_policy.skate
 include $(BUILD_SHARED_LIBRARY)
