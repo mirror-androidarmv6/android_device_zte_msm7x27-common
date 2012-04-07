@@ -23,7 +23,7 @@ $(call inherit-product, device/zte/common/build_prop.mk)
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
-PRODUCT_PACKAGES := \
+PRODUCT_PACKAGES += \
     libril \
     ZteParts \
     libopencore \
@@ -34,14 +34,9 @@ PRODUCT_PACKAGES := \
     libOmxVenc \
     libstagefrighthw \
     dexpreopt \
-    camera.zte \
     copybit.msm7x27 \
-    lights.zte \
-    sensors.zte \
     gralloc.msm7x27 \
     hwcomposer.msm7x27 \
-    audio.primary.zte \
-    audio_policy.zte \
     audio.a2dp.default \
     libaudioutils \
     abtfilt \
