@@ -1,7 +1,7 @@
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
-LOCAL_SRC_FILES:=               \
+LOCAL_SRC_FILES:= \
     AudioPolicyManager.cpp
 
 LOCAL_SHARED_LIBRARIES := \
@@ -28,6 +28,8 @@ else ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),blade2)
 LOCAL_MODULE := audio_policy.blade2
 include $(BUILD_SHARED_LIBRARY)
 endif
+
+include $(CLEAR_VARS)
 
 LOCAL_MODULE_TAGS := optional
 LOCAL_STATIC_LIBRARIES := libmedia_helper
