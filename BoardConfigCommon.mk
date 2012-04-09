@@ -56,7 +56,7 @@ COMMON_GLOBAL_CFLAGS += -DREFRESH_RATE=60
 TARGET_USES_GENLOCK := true
 
 # Libs
-TARGET_PROVIDES_LIBRIL := true
+BOARD_PROVIDES_LIBRIL := true
 
 # Recovery
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/zte/common/recovery/recovery_keys.c

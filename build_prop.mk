@@ -5,7 +5,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     qemu.sf.lcd_density=240 \
     ro.media.dec.jpeg.memcap=20000000 \
     ro.opengles.version=131072 \
-    debug.gr.numframebuffers=2 \
     persist.sys.use_dithering=1
 
 # WiFi
