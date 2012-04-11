@@ -54,6 +54,7 @@ BOARD_EGL_CFG := device/zte/common/prebuilt/lib/egl/egl.cfg
 USE_OPENGL_RENDERER := true
 COMMON_GLOBAL_CFLAGS += -DREFRESH_RATE=60
 TARGET_USES_GENLOCK := true
+TARGET_BOOTANIMATION_NAME := vertical-480x800
 
 # Libs
 BOARD_PROVIDES_LIBRIL := true
