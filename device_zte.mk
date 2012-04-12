@@ -23,6 +23,8 @@ $(call inherit-product, device/zte/common/build_prop.mk)
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
+TARGET_BOOTANIMATION_NAME := vertical-480x800
+
 PRODUCT_PACKAGES += \
     libril \
     ZteParts \
