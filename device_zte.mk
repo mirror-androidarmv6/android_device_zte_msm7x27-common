@@ -114,3 +114,7 @@ PRODUCT_COPY_FILES += \
 # Goo Manager
 PRODUCT_COPY_FILES += \
     device/zte/common/prebuilt/app/GooManager.apk:system/app/GooManager.apk
+
+# Get full apns-conf.xml instead of the development sample
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
