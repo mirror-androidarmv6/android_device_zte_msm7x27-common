@@ -1,3 +1,4 @@
+ifneq ($(CM_BUILD),)
 ifneq ($(filter $(ZTE_TARGETS),$(TARGET_DEVICE)),)
 LOCAL_PATH:= $(call my-dir)
 
@@ -54,4 +55,5 @@ LOCAL_CFLAGS += -fno-short-enums
 #endif
 
 include $(BUILD_SHARED_LIBRARY)
+endif
 endif
