@@ -35,8 +35,8 @@ PRODUCT_PACKAGES += \
 # Display   
 PRODUCT_PACKAGES += \
         gralloc.msm7x27 \
-        hwcomposer.msm7x27 \
         libQcomUI
+#        hwcomposer.msm7x27 \
 
 # Misc 
 PRODUCT_PACKAGES += \
