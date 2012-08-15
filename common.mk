@@ -49,6 +49,7 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
+        audio.usb.default \
         audio.primary.msm7x27 \
         audio.a2dp.default \
         libaudioutils
