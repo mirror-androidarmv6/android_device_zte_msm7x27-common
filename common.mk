@@ -69,6 +69,10 @@ PRODUCT_COPY_FILES += \
 endif
 
 PRODUCT_COPY_FILES += \
+        device/zte/msm7x27-common/prebuilt/GooManager.apk:system/app/GooManager.apk \
+        device/zte/msm7x27-common/prebuilt/CameraICS.apk:system/app/CameraICS.apk
+
+PRODUCT_COPY_FILES += \
         device/zte/msm7x27-common/vold.fstab:system/etc/vold.fstab \
         device/zte/msm7x27-common/media/AudioFilter.csv:system/etc/AudioFilter.csv \
         device/zte/msm7x27-common/media/AutoVolumeControl.txt:system/etc/AutoVolumeControl.txt \
