@@ -69,8 +69,9 @@ PRODUCT_COPY_FILES += \
 endif
 
 PRODUCT_COPY_FILES += \
-        device/zte/msm7x27-common/prebuilt/GooManager.apk:system/app/GooManager.apk \
+        device/zte/msm7x27-common/prebuilt/OTAUpdater.apk:system/app/OTAUpdater.apk \
         device/zte/msm7x27-common/prebuilt/CameraICS.apk:system/app/CameraICS.apk
+#        device/zte/msm7x27-common/prebuilt/GooManager.apk:system/app/GooManager.apk \
 
 PRODUCT_COPY_FILES += \
         device/zte/msm7x27-common/vold.fstab:system/etc/vold.fstab \
