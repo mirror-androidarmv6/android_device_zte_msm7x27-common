@@ -29,6 +29,8 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+        Callery2 \
+        Camera \
         libcamera \
         camera.msm7x27
 
