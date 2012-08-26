@@ -29,6 +29,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+        LegacyCamera \
         Callery2 \
         Camera \
         libcamera \
