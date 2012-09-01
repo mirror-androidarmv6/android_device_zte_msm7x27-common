@@ -19,43 +19,36 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 # GPS
 PRODUCT_PACKAGES += \
-        librpc 
+    librpc 
 
 # OMX
 PRODUCT_PACKAGES += \
-        libmm-omxcore \
-        libOmxCore \
-        libstagefrighthw
+    libmm-omxcore \
+    libOmxCore \
+    libstagefrighthw
 
 # Camera
 PRODUCT_PACKAGES += \
-        LegacyCamera \
-        Callery2 \
-        Camera \
-        libcamera \
-        camera.msm7x27
-
-# Live wallpapers
-PRODUCT_PACKAGES += \
-        LiveWallpapersPicker
+    LegacyCamera \
+    camera.msm7x27
 
 # Display
 PRODUCT_PACKAGES += \
-        gralloc.msm7x27 \
-        libQcomUI
+    gralloc.msm7x27 \
+    hwcomposer.msm7x27 \
+    copybit.msm7x27
 
 # Misc 
 PRODUCT_PACKAGES += \
-        dexpreopt \
-        setup_fs \
-        make_ext4fs
+    dexpreopt \
+    setup_fs \
+    make_ext4fs
 
 # Audio
 PRODUCT_PACKAGES += \
-        audio.usb.default \
-        audio.primary.msm7x27 \
-        audio.a2dp.default \
-        libaudioutils
+    audio.usb.default \
+    audio.a2dp.default \
+    libaudioutils
 
 PRODUCT_TAGS += dalvik.gc.type-precise
 DISABLE_DEXPREOPT := false
@@ -63,13 +56,11 @@ DISABLE_DEXPREOPT := false
 PRODUCT_COPY_FILES += \
 	device/common/gps/gps.conf_EU_SUPL:system/etc/gps.conf
 
-# for bugmailer
-ifneq ($(TARGET_BUILD_VARIANT),user)
-         PRODUCT_PACKAGES += send_bug
+PRODUCT_PACKAGES += send_bug
+
 PRODUCT_COPY_FILES += \
         system/extras/bugmailer/bugmailer.sh:system/bin/bugmailer.sh \
         system/extras/bugmailer/send_bug:system/bin/send_bug
-endif
 
 PRODUCT_COPY_FILES += \
         device/zte/msm7x27-common/vold.fstab:system/etc/vold.fstab \
