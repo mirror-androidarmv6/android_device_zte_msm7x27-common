@@ -1,9 +1,8 @@
 ifneq ($(filter $(ZTE_TARGETS),$(TARGET_DEVICE)),)
 LOCAL_PATH:= $(call my-dir)
-
 include $(CLEAR_VARS)
 
-LOCAL_SRC_FILES :=               \
+LOCAL_SRC_FILES:= \
     AudioPolicyManager.cpp
 
 LOCAL_SHARED_LIBRARIES := \
@@ -17,8 +16,9 @@ LOCAL_STATIC_LIBRARIES := libmedia_helper
 LOCAL_MODULE:= audio_policy.$(TARGET_DEVICE)
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
 
+
 ifeq ($(BOARD_HAVE_BLUETOOTH),true)
-#  LOCAL_CFLAGS += -DWITH_A2DP
+  LOCAL_CFLAGS += -DWITH_A2DP
 endif
 
 include $(BUILD_SHARED_LIBRARY)

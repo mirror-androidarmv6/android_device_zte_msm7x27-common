@@ -17,7 +17,7 @@
 
 #include <math.h>
 
-//#define ALOG_NDEBUG 0
+//#define LOG_NDEBUG 0
 #define LOG_TAG "AudioHardwareMSM72XX"
 #include <utils/Log.h>
 #include <utils/String8.h>
@@ -35,7 +35,7 @@
 #include "AudioHardware.h"
 #include <media/AudioRecord.h>
 
-#define ALOG_SND_RPC 0  // Set to 1 to log sound RPC's
+#define LOG_SND_RPC 0  // Set to 1 to log sound RPC's
 
 #define COMBO_DEVICE_SUPPORTED 0 // Headset speaker combo device not supported on this target
 #define DUALMIC_KEY "dualmic_enabled"
@@ -1072,7 +1072,7 @@ static status_t set_volume_rpc(uint32_t device,
                                uint32_t volume,
                                int m7xsnddriverfd)
 {
-#if ALOG_SND_RPC
+#if LOG_SND_RPC
     ALOGD("rpc_snd_set_volume(%d, %d, %d)\n", device, method, volume);
 #endif
 
@@ -1175,7 +1175,7 @@ static status_t do_route_audio_rpc(uint32_t device,
     if (device == -1UL)
         return NO_ERROR;
 
-#if ALOG_SND_RPC
+#if LOG_SND_RPC
     ALOGD("rpc_snd_set_device(%d, %d, %d)\n", device, ear_mute, mic_mute);
 #endif
 
@@ -1498,7 +1498,7 @@ AudioHardware::AudioStreamOutMSM72xx::~AudioStreamOutMSM72xx()
 
 ssize_t AudioHardware::AudioStreamOutMSM72xx::write(const void* buffer, size_t bytes)
 {
-    // ALOGD("AudioStreamOutMSM72xx::write(%p, %u)", buffer, bytes);
+    // LOGD("AudioStreamOutMSM72xx::write(%p, %u)", buffer, bytes);
     status_t status = NO_INIT;
     size_t count = bytes;
     const uint8_t* p = static_cast<const uint8_t*>(buffer);
