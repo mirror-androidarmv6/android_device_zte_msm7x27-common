@@ -29,13 +29,11 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    LegacyCamera \
     camera.msm7x27
 
 # Display
 PRODUCT_PACKAGES += \
     gralloc.msm7x27 \
-    hwcomposer.msm7x27 \
     copybit.msm7x27
 
 # Misc 
