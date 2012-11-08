@@ -14,6 +14,9 @@
 # limitations under the License.
 #
 
+DEVICE_PACKAGE_OVERLAYS := device/zte/msm7x27-common/overlay
+
+# AAPT
 PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
@@ -40,8 +43,7 @@ PRODUCT_PACKAGES += \
 # Misc 
 PRODUCT_PACKAGES += \
     dexpreopt \
-    setup_fs \
-    make_ext4fs
+    setup_fs
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -55,20 +57,13 @@ DISABLE_DEXPREOPT := false
 PRODUCT_COPY_FILES += \
 	device/common/gps/gps.conf_EU_SUPL:system/etc/gps.conf
 
-PRODUCT_PACKAGES += send_bug
-
-PRODUCT_COPY_FILES += \
-        system/extras/bugmailer/bugmailer.sh:system/bin/bugmailer.sh \
-        system/extras/bugmailer/send_bug:system/bin/send_bug
-
 PRODUCT_COPY_FILES += \
         device/zte/msm7x27-common/vold.fstab:system/etc/vold.fstab \
         device/zte/msm7x27-common/media/AudioFilter.csv:system/etc/AudioFilter.csv \
         device/zte/msm7x27-common/media/AutoVolumeControl.txt:system/etc/AutoVolumeControl.txt \
         device/zte/msm7x27-common/media/media_profiles.xml:system/etc/media_profiles.xml \
         device/zte/msm7x27-common/media/audio_policy.conf:system/etc/audio_policy.conf \
-        device/zte/msm7x27-common/media/media_codecs.xml:system/etc/media_codecs.xml \
-        device/zte/msm7x27-common/prebuilt/start_usb0.sh:system/etc/start_usb0.sh 
+        device/zte/msm7x27-common/media/media_codecs.xml:system/etc/media_codecs.xml
 
 # Bluetooth configuration files
 PRODUCT_COPY_FILES += \
