@@ -14,6 +14,9 @@
 # limitations under the License.
 #
 
+$(call inherit-product, device/zte/msm7x27-common/prop.mk)
+
+# Overlay
 DEVICE_PACKAGE_OVERLAYS := device/zte/msm7x27-common/overlay
 
 # AAPT
@@ -32,8 +35,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.msm7x27 \
-    LegacyCamera
+    camera.msm7x27
 
 # Display
 PRODUCT_PACKAGES += \
