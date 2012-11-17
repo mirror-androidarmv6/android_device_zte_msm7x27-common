@@ -14,8 +14,6 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/zte/msm7x27-common/prop.mk)
-
 # Overlay
 DEVICE_PACKAGE_OVERLAYS := device/zte/msm7x27-common/overlay
 
@@ -81,4 +79,5 @@ PRODUCT_COPY_FILES += \
          frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
          frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
 
+#$(call inherit-product, device/zte/msm7x27-common/prop.mk)
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)

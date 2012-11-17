@@ -38,7 +38,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=adb,mass_storage \
     persist.service.adb.enable=1
-# Don't set /proc/sys/vm/dirty_ratio to 0 when USB mounting
+
+# Dont set /proc/sys/vm/dirty_ratio to 0 when USB mounting
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vold.umsdirtyratio=20
 
