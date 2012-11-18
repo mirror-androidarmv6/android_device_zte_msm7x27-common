@@ -78,3 +78,6 @@ WITH_JIT := true
 ENABLE_JSC_JIT := true
 JS_ENGINE := v8
 HTTP := chrome
+
+# Small system
+BOARD_HAS_SMALL_SYSTEM_PARTITION := true
