@@ -22,6 +22,7 @@ USE_CAMERA_STUB := true
 -include vendor/zte/msm7x27-common/BoardConfigVendor.mk
 
 # Target properties
+TARGET_ARCH := arm
 TARGET_CPU_ABI := armeabi-v6l
 TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH_VARIANT := armv6-vfp
