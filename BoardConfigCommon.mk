@@ -23,8 +23,8 @@ USE_CAMERA_STUB := true
 
 # Target properties
 TARGET_ARCH := arm
-TARGET_CPU_ABI := armeabi-v6l
-TARGET_CPU_ABI2 := armeabi
+TARGET_CPU_ABI := armeabi
+TARGET_CPU_ABI2 := armeabi-v6l
 TARGET_ARCH_VARIANT := armv6-vfp
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
