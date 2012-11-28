@@ -21,7 +21,7 @@ ifeq ($(BOARD_HAVE_BLUETOOTH),true)
   LOCAL_CFLAGS += -DWITH_A2DP
 endif
 
-#include $(BUILD_SHARED_LIBRARY)
+include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 
@@ -53,5 +53,5 @@ LOCAL_CFLAGS += -fno-short-enums
 #  LOCAL_SHARED_LIBRARIES += audio.a2dp.default libbinder
 #endif
 
-#include $(BUILD_SHARED_LIBRARY)
+include $(BUILD_SHARED_LIBRARY)
 endif

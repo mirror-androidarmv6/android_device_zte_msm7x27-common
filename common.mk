@@ -47,6 +47,8 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
+    audio.primary.skate \
+    audio_policy.skate
     audio.usb.default \
     audio.a2dp.default \
     libaudioutils
