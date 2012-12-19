@@ -14,8 +14,6 @@
 # limitations under the License.
 #
 
-ZTE_TARGETS := blade blade2 skate
-
-ifneq ($(filter $(ZTE_TARGETS),$(TARGET_DEVICE)),)
+ifneq ($(TARGET_BOOTLOADER_BOARD_NAME),sharp)
 include $(all-subdir-makefiles)
 endif

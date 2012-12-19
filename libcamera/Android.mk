@@ -1,4 +1,5 @@
-ifneq ($(filter $(ZTE_TARGETS),$(TARGET_DEVICE)),)
+ifneq ($(TARGET_BOOTLOADER_BOARD_NAME),sharp)
+
 LOCAL_PATH := $(call my-dir)
 
 ## Make libcamera

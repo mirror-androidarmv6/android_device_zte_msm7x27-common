@@ -30,6 +30,7 @@ TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 TARGET_BOARD_PLATFORM := msm7x27
 TARGET_SPECIFIC_HEADER_PATH := device/zte/msm7x27-common/include
+TARGET_BOOTLOADER_BOARD_NAME := sharp
 
 # Recovery
 BOARD_CUSTOM_GRAPHICS := ../../../device/zte/msm7x27-common/recovery/graphics.c

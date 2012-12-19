@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifneq ($(filter $(ZTE_TARGETS),$(TARGET_DEVICE)),)
+ifneq ($(TARGET_BOOTLOADER_BOARD_NAME),sharp)
 
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)

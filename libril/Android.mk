@@ -1,6 +1,6 @@
 # Copyright 2006 The Android Open Source Project
 
-ifneq ($(filter $(ZTE_TARGETS),$(TARGET_DEVICE)),)
+ifneq ($(TARGET_BOOTLOADER_BOARD_NAME),sharp)
 
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)

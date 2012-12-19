@@ -1,4 +1,5 @@
-ifneq ($(filter $(ZTE_TARGETS),$(TARGET_DEVICE)),)
+ifneq ($(TARGET_BOOTLOADER_BOARD_NAME),sharp)
+
 LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
@@ -16,10 +17,7 @@ LOCAL_STATIC_LIBRARIES := libmedia_helper
 LOCAL_MODULE:= audio_policy.$(TARGET_DEVICE)
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
 
-
-ifeq ($(BOARD_HAVE_BLUETOOTH),true)
-  LOCAL_CFLAGS += -DWITH_A2DP
-endif
+LOCAL_CFLAGS += -DWITH_A2DP
 
 include $(BUILD_SHARED_LIBRARY)
 
@@ -38,20 +36,8 @@ LOCAL_SHARED_LIBRARIES := \
     libhardware_legacy \
     libdl
 
-ifeq ($TARGET_OS)-$(TARGET_SIMULATOR),linux-true)
-LOCAL_LDLIBS += -ldl
-endif
-
-ifneq ($(TARGET_SIMULATOR),true)
-LOCAL_SHARED_LIBRARIES += libdl
-endif
-
 LOCAL_SRC_FILES += AudioHardware.cpp
 LOCAL_CFLAGS += -fno-short-enums
-
-#ifeq ($(BOARD_HAVE_BLUETOOTH),true)
-#  LOCAL_SHARED_LIBRARIES += audio.a2dp.default libbinder
-#endif
 
 include $(BUILD_SHARED_LIBRARY)
 endif
