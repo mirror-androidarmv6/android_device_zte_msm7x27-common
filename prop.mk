@@ -27,7 +27,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.enabletr=false \
     debug.hwui.render_dirty_regions=false \
     debug.hwui.disable_vsync=true \
-    debug.gr.numframebuffers=3 \ 
+    debug.gr.numframebuffers=3 \
     debug.composition.type=dyn
 
 # Camcorder
