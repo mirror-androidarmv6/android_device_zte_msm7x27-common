@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2011 The Android Open-Source Project
+# Copyright (C) 2012 The Android Open-Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -20,15 +20,11 @@ USE_CAMERA_STUB := true
 
 # Use the non-open-source parts, if they're present
 -include vendor/zte/msm7x27-common/BoardConfigVendor.mk
+-include device/qcom/msm7x27/BoardConfigCommon.mk
 
 # Target properties
-TARGET_ARCH := arm
-TARGET_CPU_ABI := armeabi
-TARGET_CPU_ABI2 := armeabi-v6l
-TARGET_ARCH_VARIANT := armv6-vfp
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
-TARGET_BOARD_PLATFORM := msm7x27
 TARGET_SPECIFIC_HEADER_PATH := device/zte/msm7x27-common/include
 TARGET_BOOTLOADER_BOARD_NAME := sharp
 
@@ -55,32 +51,13 @@ ENABLE_WEBGL := true
 TARGET_FORCE_CPU_UPLOAD := true
 
 # QCOM
-BOARD_USES_QCOM_HARDWARE := true
-COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE
 BOARD_NEEDS_MEMORYHEAPPMEM := true
 
 # Graphics
 BOARD_EGL_CFG := device/zte/msm7x27-common/egl.cfg
-USE_OPENGL_RENDERER := true
-COMMON_GLOBAL_CFLAGS += -DQCOM_ICS_COMPAT -DQCOM_NO_SECURE_PLAYBACK -DQCOM_LEGACY_OMX -DQCOM_ICS_COMPAT
-BOARD_ADRENO_DECIDE_TEXTURE_TARGET := true
-TARGET_NO_HW_VSYNC := true
-TARGET_NO_HW_OVERLAY := true
-
-# Bootanimation
-TARGET_BOOTANIMATION_USE_RGB565 := true
 
 # Fonts
 SMALLER_FONT_FOOTPRINT := true
 
 # Camera
 TARGET_DISABLE_ARM_PIE := true
-
-# Javascript and Browser
-WITH_JIT := true
-ENABLE_JSC_JIT := true
-JS_ENGINE := v8
-HTTP := chrome
-
-# Small system
-BOARD_HAS_SMALL_SYSTEM_PARTITION := true
