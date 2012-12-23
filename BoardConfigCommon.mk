@@ -40,8 +40,18 @@ BOARD_PROVIDES_LIBRIL := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun0/file
 BOARD_UMS_LUNFILE := "/sys/devices/platform/msm_hsusb/gadget/lun0/file"
 
+# Audio
+TARGET_PROVIDES_LIBAUDIO := true
+
+# Liblights
+TARGET_PROVIDES_LIBLIGHTS := true
+
 # Graphics
 BOARD_EGL_CFG := device/zte/msm7x27-common/egl.cfg
+BOARD_EGL_NEEDS_LEGACY_FB := true
+TARGET_DISABLE_TRIPLE_BUFFERING := true
+COMMON_GLOBAL_CFLAGS += -DANCIENT_GL
+TARGET_QCOM_DISPLAY_VARIANT := mr1
 
 # Fonts
 SMALLER_FONT_FOOTPRINT := true
