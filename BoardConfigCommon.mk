@@ -44,7 +44,7 @@ BOARD_UMS_LUNFILE := "/sys/devices/platform/msm_hsusb/gadget/lun0/file"
 TARGET_PROVIDES_LIBAUDIO := true
 
 # Liblights
-TARGET_PROVIDES_LIBLIGHTS := true
+TARGET_PROVIDES_LIBLIGHT := true
 
 # Graphics
 BOARD_EGL_CFG := device/zte/msm7x27-common/egl.cfg
