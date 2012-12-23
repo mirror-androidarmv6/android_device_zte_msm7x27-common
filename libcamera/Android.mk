@@ -1,4 +1,4 @@
-ifneq ($(TARGET_BOOTLOADER_BOARD_NAME),sharp)
+ifeq ($(TARGET_BOOTLOADER_BOARD_NAME),sharp)
 
 LOCAL_PATH := $(call my-dir)
 
