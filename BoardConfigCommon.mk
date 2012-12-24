@@ -50,8 +50,5 @@ TARGET_PROVIDES_LIBLIGHT := true
 BOARD_EGL_CFG := device/zte/msm7x27-common/egl.cfg
 TARGET_QCOM_DISPLAY_VARIANT := mr1
 
-# Camera
-BOARD_USES_LEGACY_CAMERA := true
-
 # Fonts
 SMALLER_FONT_FOOTPRINT := true
