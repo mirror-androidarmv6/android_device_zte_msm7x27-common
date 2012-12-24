@@ -30,7 +30,7 @@ BOARD_CUSTOM_GRAPHICS := ../../../device/zte/msm7x27-common/recovery/graphics.c
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/zte/msm7x27-common/recovery/recovery_ui.c
 
 # Kernel
-TARGET_KERNEL_SOURCE := kernel/zte/msm7x27
+#TARGET_KERNEL_SOURCE := kernel/zte/msm7x27
 BOARD_KERNEL_BASE := 0x02600000
 
 # RIL
