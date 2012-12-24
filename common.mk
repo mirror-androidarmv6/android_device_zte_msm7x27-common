@@ -20,6 +20,9 @@ DEVICE_PACKAGE_OVERLAYS := device/zte/msm7x27-common/overlay
 # Inherit qcom common
 $(call inherit-product, device/qcom/msm7x27/msm7x27.mk)
 
+# Inherit languages
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+
 # Inherit hdpi 512
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 
