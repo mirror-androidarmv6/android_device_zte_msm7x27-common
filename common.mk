@@ -40,7 +40,6 @@ PRODUCT_PACKAGES += \
 
 # Misc 
 PRODUCT_PACKAGES += \
-    dexpreopt \
     lights.msm7x27 \
     sensors.msm7x27
 
@@ -49,9 +48,6 @@ PRODUCT_PACKAGES += \
     audio.primary.msm7x27 \
     audio_policy.msm7x27 \
     audio.usb.default
-
-PRODUCT_TAGS += dalvik.gc.type-precise
-DISABLE_DEXPREOPT := false
 
 # GPS
 PRODUCT_COPY_FILES += \

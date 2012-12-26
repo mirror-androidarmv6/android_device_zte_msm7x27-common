@@ -47,7 +47,6 @@ TARGET_PROVIDES_LIBAUDIO := true
 TARGET_PROVIDES_LIBLIGHT := true
 
 # Graphics
-BOARD_EGL_CFG := device/zte/msm7x27-common/egl.cfg
 TARGET_QCOM_DISPLAY_VARIANT := mr1
 
 # Fonts
