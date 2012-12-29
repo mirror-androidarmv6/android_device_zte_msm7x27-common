@@ -28,6 +28,7 @@ TARGET_BOOTLOADER_BOARD_NAME := sharp
 # Recovery
 BOARD_CUSTOM_GRAPHICS := ../../../device/zte/msm7x27-common/recovery/graphics.c
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/zte/msm7x27-common/recovery/recovery_ui.c
+BOARD_HAS_FLIPPED_SCREEN := true
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/zte/msm7x27
