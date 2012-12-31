@@ -37,17 +37,14 @@ BOARD_KERNEL_BASE := 0x02600000
 BOARD_PROVIDES_LIBRIL := true
 
 # USB
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun0/file
-BOARD_UMS_LUNFILE := "/sys/devices/platform/msm_hsusb/gadget/lun0/file"
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun/file
+BOARD_UMS_LUNFILE := "/sys/class/android_usb/android0/f_mass_storage/lun/file"
 
 # Audio
 TARGET_PROVIDES_LIBAUDIO := true
 
 # Liblights
 TARGET_PROVIDES_LIBLIGHT := true
-
-# Graphics
-TARGET_QCOM_DISPLAY_VARIANT := mr1
 
 # Fonts
 SMALLER_FONT_FOOTPRINT := true
