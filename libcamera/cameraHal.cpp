@@ -32,7 +32,7 @@
 #define MSM_COPY_HW 1
 #define HWA 1
 #ifdef HWA
-#include "qcom/display_legacy-mr1/libgralloc/gralloc_priv.h"
+#include "qcom/display-legacy/libgralloc/gralloc_priv.h"
 #else
 #include "libhardware/modules/gralloc/gralloc_priv.h"
 #endif
@@ -72,7 +72,7 @@ camera_module_t HAL_MODULE_INFO_SYM = {
       version_major: 1,
       version_minor: 0,
       id: CAMERA_HARDWARE_MODULE_ID,
-      name: "Camera HAL for ICS",
+      name: "Camera HAL for QCOM devices which use libcamera",
       author: "Raviprasad V Mummidi",
       methods: &camera_module_methods,
       dso: NULL,
@@ -608,7 +608,7 @@ void
 qcamera_release_recording_frame(struct camera_device * device,
                                 const void *opaque)
 {
-   /* 
+   /*
     * We release the frame immediately in CameraHAL_DataTSCb after making a
     * copy. So, this is just a NOP.
     */
