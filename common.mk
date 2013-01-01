@@ -20,9 +20,6 @@ DEVICE_PACKAGE_OVERLAYS := device/zte/msm7x27-common/overlay
 # Inherit qcom common
 $(call inherit-product, device/qcom/msm7x27/msm7x27.mk)
 
-# Inherit languages
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-
 # Inherit hdpi 512
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 
@@ -51,13 +48,13 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_COPY_FILES += \
-	device/common/gps/gps.conf_EU_SUPL:system/etc/gps.conf
+    device/common/gps/gps.conf_EU_SUPL:system/etc/gps.conf
 
 # Media and vold
 PRODUCT_COPY_FILES += \
-        device/zte/msm7x27-common/vold.fstab:system/etc/vold.fstab \
-        device/zte/msm7x27-common/media/AudioFilter.csv:system/etc/AudioFilter.csv \
-        device/zte/msm7x27-common/media/AutoVolumeControl.txt:system/etc/AutoVolumeControl.txt \
-        device/zte/msm7x27-common/media/media_profiles.xml:system/etc/media_profiles.xml \
-        device/zte/msm7x27-common/media/audio_policy.conf:system/etc/audio_policy.conf \
-        device/zte/msm7x27-common/media/media_codecs.xml:system/etc/media_codecs.xml
+    device/zte/msm7x27-common/vold.fstab:system/etc/vold.fstab \
+    device/zte/msm7x27-common/media/AudioFilter.csv:system/etc/AudioFilter.csv \
+    device/zte/msm7x27-common/media/AutoVolumeControl.txt:system/etc/AutoVolumeControl.txt \
+    device/zte/msm7x27-common/media/media_profiles.xml:system/etc/media_profiles.xml \
+    device/zte/msm7x27-common/media/audio_policy.conf:system/etc/audio_policy.conf \
+    device/zte/msm7x27-common/media/media_codecs.xml:system/etc/media_codecs.xml
