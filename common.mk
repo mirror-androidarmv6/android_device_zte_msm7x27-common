@@ -41,7 +41,8 @@ PRODUCT_PACKAGES += \
 # Misc 
 PRODUCT_PACKAGES += \
     lights.msm7x27 \
-    sensors.msm7x27
+    sensors.msm7x27 \
+    power.msm7x27
 
 # Audio
 PRODUCT_PACKAGES += \
