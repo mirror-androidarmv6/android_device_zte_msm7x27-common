@@ -51,15 +51,12 @@ PRODUCT_PACKAGES += \
     audio_policy.msm7x27 \
     audio.usb.default
 
-# GPS
-PRODUCT_COPY_FILES += \
-    device/common/gps/gps.conf_EU_SUPL:system/etc/gps.conf
-
 # Media and vold
 PRODUCT_COPY_FILES += \
-    device/zte/msm7x27-common/vold.fstab:system/etc/vold.fstab \
+    device/zte/msm7x27-common/prebuilt/vold.fstab:system/etc/vold.fstab \
     device/zte/msm7x27-common/media/AudioFilter.csv:system/etc/AudioFilter.csv \
     device/zte/msm7x27-common/media/AutoVolumeControl.txt:system/etc/AutoVolumeControl.txt \
     device/zte/msm7x27-common/media/media_profiles.xml:system/etc/media_profiles.xml \
     device/zte/msm7x27-common/media/audio_policy.conf:system/etc/audio_policy.conf \
-    device/zte/msm7x27-common/media/media_codecs.xml:system/etc/media_codecs.xml
+    device/zte/msm7x27-common/media/media_codecs.xml:system/etc/media_codecs.xml \
+    device/zte/skate/prebuilt/gps.conf:system/etc/gps.conf
