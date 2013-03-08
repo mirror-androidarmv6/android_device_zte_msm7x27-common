@@ -43,7 +43,7 @@ PRODUCT_PACKAGES += \
     lights.msm7x27 \
     sensors.msm7x27 \
     power.msm7x27 \
-    hwcomposer.msm7x27 \
+    hwcomposer.msm7x27
 
 # FM Radio
 PRODUCT_PACKAGES += \
@@ -68,4 +68,4 @@ PRODUCT_COPY_FILES += \
     device/zte/msm7x27-common/media/media_profiles.xml:system/etc/media_profiles.xml \
     device/zte/msm7x27-common/media/audio_policy.conf:system/etc/audio_policy.conf \
     device/zte/msm7x27-common/media/media_codecs.xml:system/etc/media_codecs.xml \
-    device/zte/skate/prebuilt/gps.conf:system/etc/gps.conf
+    device/zte/msm7x27-common/prebuilt/gps.conf:system/etc/gps.conf
