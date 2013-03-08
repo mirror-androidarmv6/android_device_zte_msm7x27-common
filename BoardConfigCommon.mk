@@ -33,10 +33,15 @@ BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/zte/msm7x27-common/recovery/rec
 TARGET_KERNEL_SOURCE := kernel/zte/msm7x27
 BOARD_KERNEL_BASE := 0x02600000
 
-# Provides stuff
+# Provides
 BOARD_PROVIDES_LIBRIL := true
 TARGET_PROVIDES_LIBAUDIO := true
 TARGET_PROVIDES_LIBLIGHT := true
+
+# FM Radio
+BOARD_USES_STE_FMRADIO := true
+BOARD_HAVE_QCOM_FM := true
+COMMON_GLOBAL_CFLAGS += -DSTE_FM -DQCOM_FM_ENABLED
 
 # USB
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun0/file
