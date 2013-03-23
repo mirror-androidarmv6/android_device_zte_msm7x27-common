@@ -21,7 +21,8 @@ DEVICE_PACKAGE_OVERLAYS := device/zte/msm7x27-common/overlay
 $(call inherit-product, device/qcom/msm7x27/msm7x27.mk)
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/tiny.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/telephony.mk)
 
 # Inherit hdpi 512
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
@@ -48,7 +49,7 @@ PRODUCT_PACKAGES += \
 # FM Radio
 PRODUCT_PACKAGES += \
     libfmradio.si4708 \
-    FmRadioReceiver
+    Effem
 
 # Audio
 PRODUCT_PACKAGES += \
