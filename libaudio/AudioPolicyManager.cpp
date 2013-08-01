@@ -500,7 +500,11 @@ bool AudioPolicyManager::isStreamActive(int stream, uint32_t inPastMs) const
     }
 
     if (stream == AudioSystem::MUSIC &&
-            (mAvailableOutputDevices & AUDIO_DEVICE_OUT_FM)) {
+            (mAvailableOutputDevices
+#ifdef QCOM_FM_ENABLED
+                                     & AUDIO_DEVICE_OUT_FM
+#endif
+	)) {
         return true;
     }
 
