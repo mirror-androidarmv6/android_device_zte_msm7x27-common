@@ -26,8 +26,8 @@ TARGET_SPECIFIC_HEADER_PATH := device/zte/msm7x27-common/include
 TARGET_BOOTLOADER_BOARD_NAME := sharp
 
 # Recovery
-BOARD_CUSTOM_GRAPHICS := ../../../device/zte/msm7x27-common/recovery/graphics.c
-BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/zte/msm7x27-common/recovery/recovery_keys.c
+# BOARD_CUSTOM_GRAPHICS := ../../../device/zte/msm7x27-common/recovery/graphics.c
+# BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/zte/msm7x27-common/recovery/recovery_keys.c
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/zte/msm7x27
@@ -43,9 +43,19 @@ TARGET_PROVIDES_LIBLIGHT := true
 #BOARD_HAVE_QCOM_FM := true
 #COMMON_GLOBAL_CFLAGS += -DSTE_FM -DQCOM_FM_ENABLED
 
+# Metadata
+USE_SET_METADATA := false
+
 # USB
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun0/file
 BOARD_UMS_LUNFILE := "/sys/devices/platform/msm_hsusb/gadget/lun0/file"
+
+## Browser & WebKit
+ENABLE_WEBGL := true
+TARGET_WEBKIT_USE_MORE_MEMORY := true
+
+## TEMPORARY HACK: skip building external/chromium_org/
+PRODUCT_PREBUILT_WEBVIEWCHROMIUM := yes
 
 # Fonts
 SMALLER_FONT_FOOTPRINT := true
