@@ -64,8 +64,6 @@
 
     <bool name="config_animateScreenLights">false</bool>
 
-    <bool name="config_batterySdCardAccessibility">true</bool>
-
     <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveNotificationLed">true</bool>
 
