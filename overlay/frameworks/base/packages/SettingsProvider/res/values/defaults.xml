@@ -1,0 +1,24 @@
+<resources>
+    <!-- Set the automatic brightness mode on by default -->
+    <bool name="def_screen_brightness_automatic_mode">true</bool>
+
+    <!-- Enable install nonmarket apps -->
+    <bool name="def_install_non_market_apps">true</bool>
+
+    <!-- Disable haptic_feedback -->
+    <bool name="def_haptic_feedback">false</bool>
+
+    <!-- Notifications use ringer volume -->
+    <bool name="def_notifications_use_ring_volume">false</bool>
+
+    <!-- I don't like the click sound that it makes -->
+    <bool name="def_sound_effects_enabled">false</bool>
+    <bool name="def_dtmf_tones_enabled">false</bool>
+
+    <!-- I don't like the lockscreen sound -->
+    <integer name="def_lockscreen_sounds_enabled">0</integer>
+
+    <!-- Circle battery style -->
+    <integer name="def_battery_style">2</integer>
+
+</resources>

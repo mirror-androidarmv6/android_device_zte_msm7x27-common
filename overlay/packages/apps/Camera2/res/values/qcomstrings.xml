@@ -1,0 +1,4 @@
+<resources>
+    <!-- Default video encoder setting. A numerical value. -->
+    <string name="pref_camera_videoencoder_default" translatable="false">h263</string>
+</resources>

@@ -19,40 +19,52 @@
 
 <device name="Android">
   <item name="none">0</item>
-  <item name="screen.on">30</item>
+  <item name="screen.on">100</item>
   <item name="bluetooth.active">103</item>
   <item name="bluetooth.on">0.8</item>
   <!-- CPU wakelock held for 830ms on bluetooth headset at command. 43mA * 830 -->
   <item name="bluetooth.at">35690</item>
-  <item name="screen.full">114</item>
+  <item name="screen.full">160</item>
   <item name="wifi.on">23</item>
-  <item name="wifi.active">200</item>
+  <item name="wifi.active">120</item>
   <item name="wifi.scan">200</item>
-  <item name="dsp.audio">70</item>
-  <item name="dsp.video">100</item>
+  <item name="dsp.audio">106</item>	<!-- Estimated -->
+  <item name="dsp.video">106</item>	<!-- Estimated -->
   <item name="radio.active">230</item>
   <item name="gps.on">120</item>
   <array name="radio.on"> <!-- Strength 0 to BINS-1 -->
-      <value>90</value>
+      <value>3</value>
       <value>3</value>
   </array>
+  <!-- Different CPU speeds as reported in
+       /sys/devices/system/cpu/cpu0/cpufreq/stats/time_in_state -->
   <array name="cpu.speeds">
-      <value>19200</value>
+      <value>120000</value>
       <value>122880</value>
-      <value>128000</value>
+      <value>200000</value>
       <value>245760</value>
-      <value>384000</value>
-      <value>528000</value>
+      <value>320000</value>
+      <value>400000</value>
+      <value>480000</value>
+      <value>600000</value>
+      <value>768000</value>
+      <value>787200</value>
   </array>
   <!-- Power consumption when CPU is idle -->
-  <item name="cpu.idle">1.7</item>
+  <item name="cpu.idle">3.0</item>
   <!-- Power consumption at different speeds -->
-  <array name="cpu.active">
-      <value>0</value>
-      <value>0</value>
-      <value>0</value>
-      <value>45</value>
-      <value>100</value>
-      <value>140</value>
+  <array name="cpu.active"> <!-- Estimated -->
+      <value>30</value>  <!-- 120000 -->
+      <value>32</value>  <!-- 122880 -->
+      <value>45</value>  <!-- 200000 -->
+      <value>60</value>  <!-- 245760 -->
+      <value>74</value>  <!-- 320000 -->
+      <value>88</value>  <!-- 400000 -->
+      <value>100</value> <!-- 480000 -->
+      <value>120</value> <!-- 600000 -->
+      <value>160</value> <!-- 768000 -->
+      <value>170</value> <!-- 787200 -->
   </array>
+  <!-- This is the battery capacity in mAh -->
+  <item name="battery.capacity">1400</item>
 </device>
