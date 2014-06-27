@@ -21,13 +21,21 @@
      for different hardware and product builds. -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+	<!-- Device configuration setting the /proc/sys/vm/extra_free_kbytes tunable in the kernel
+         (if it exists).  A high value will increase the amount of memory that the kernel
+         tries to keep free, reducing allocation time and causing the lowmemorykiller to kill
+         earlier.  A low value allows more memory to be used by processes but may cause more
+         allocations to block waiting on disk I/O or lowmemorykiller.  Overrides the default
+         value chosen by ActivityManager based on screen size.  0 prevents keeping any extra
+         memory over what the kernel keeps by default.  -1 keeps the default. -->
+    <integer name="config_extraFreeKbytesAbsolute">3096</integer>
+
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
           bluetooth interfaces.  If the device doesn't want to support tethering over bluetooth this
           should be empty. -->
     <string-array translatable="false" name="config_tether_bluetooth_regexs">
-        <item>"bnep\\d"</item>
+        <item>"bt-pan"</item>
     </string-array>
-
 
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
          Wifi interfaces. If the device doesn't want to support tethering over Wifi this
@@ -60,9 +68,11 @@
 
     <bool name="config_automatic_brightness_available">true</bool>
 
-    <bool name="config_unplugTurnsOnScreen">false</bool>
+    <bool name="config_unplugTurnsOnScreen">true</bool>
 
     <bool name="config_animateScreenLights">false</bool>
+
+    <bool name="config_batterySdCardAccessibility">true</bool>
 
     <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveNotificationLed">true</bool>
@@ -81,10 +91,11 @@
 
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
-        <item>200</item>
-        <item>400</item>
+        <item>5</item>
+        <item>10</item>
+        <item>95</item>
         <item>1000</item>
-        <item>3000</item>
+        <item>8000</item>
     </integer-array>
 
     <!-- Array of output values for LCD backlight corresponding to the LUX values
@@ -92,10 +103,11 @@
          than the size of the config_autoBrightnessLevels array.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>35</item>
-        <item>55</item>
+        <item>50</item>
         <item>70</item>
-        <item>90</item>
+        <item>140</item>
+        <item>140</item>
+        <item>140</item>
         <item>210</item>
     </integer-array>
 
@@ -104,8 +116,9 @@
          than the size of the config_autoBrightnessLevels array.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessButtonBacklightValues">
-        <item>255</item>
-        <item>255</item>
+        <item>5</item>
+        <item>5</item>
+        <item>5</item>
         <item>0</item>
         <item>0</item>
         <item>0</item>
@@ -117,7 +130,8 @@
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessKeyboardBacklightValues">
         <item>5</item>
-        <item>0</item>
+        <item>5</item>
+        <item>5</item>
         <item>0</item>
         <item>0</item>
         <item>0</item>
@@ -134,6 +148,9 @@
 
     <!-- True will enable the electron beam screen-off animation. -->
     <bool name="config_screenOffAnimation">true</bool>
+	
+    <!-- Enables or disables fading edges when marquee is enabled in TextView. -->
+    <bool name="config_ui_enableFadingMarquee">false</bool>
 
     <!-- Timeout in MS for how long you have to long-press the back key to
          kill the foreground app. -->
